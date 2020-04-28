@@ -19,29 +19,35 @@ public class Launcher extends AppCompatActivity {
         hnd.postDelayed(new Runnable() {
             @Override
             public void run() {
-                checkNet();
+                if (checkNet()){
+                    checkLogin();
+                }
             }
         },1000);
     }
 
-    protected void checkNet(){
+    protected void checkLogin(){
+        FileManager Fm = new FileManager();
+        Fm.openFile(getApplicationContext(),"session");
+        if (Fm.checkforfile()){
+            startActivity(new Intent(this,MainActivity.class));
+        }else{
+            startActivity(new Intent(this,login.class));
+        }
+        finishAfterTransition();
+    }
+
+    protected boolean checkNet(){
         NetworkManager NetMgr = new NetworkManager();
         if (NetMgr.CheckForInternetAccess(getApplicationContext())){
-            FileManager Fm = new FileManager();
-            Fm.openFile(getApplicationContext(),"session");
-            if (Fm.checkforfile()){
-                startActivity(new Intent(this,MainActivity.class));
-            }else{
-                startActivity(new Intent(this,login.class));
-            }
-            finishAfterTransition();
+            return true;
         }else{
-            /*
+
             NotNetDialog dialog = new NotNetDialog();
             dialog.targetActivity = this;
-            dialog.PositiveText = getResources().getString(R.string.dialog_noNetwork_positive);
+            dialog.PositiveText = getResources().getString(R.string.dialog_noNetwork_Positive);
             dialog.Title = getResources().getString(R.string.dialog_noNetwork_title);
-            dialog.Message = getResources().getString(R.string.dialog_noNetwork_message);
+            dialog.Message = getResources().getString(R.string.dialog_noNetwork_Message);
             dialog.listener = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -50,7 +56,8 @@ public class Launcher extends AppCompatActivity {
             };
 
             dialog.show(getSupportFragmentManager(),getResources().getString(R.string.dialog_noNetwork_title));
-            */
+
+            return false;
         }
 
     }
