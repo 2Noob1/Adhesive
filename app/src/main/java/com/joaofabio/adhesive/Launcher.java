@@ -21,7 +21,7 @@ public class Launcher extends AppCompatActivity {
             public void run() {
                 checkNet();
             }
-        },3000);
+        },5000);
     }
 
     protected void checkNet(){
