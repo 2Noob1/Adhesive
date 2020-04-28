@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 public class Launcher extends AppCompatActivity {
 
@@ -40,6 +41,7 @@ public class Launcher extends AppCompatActivity {
     protected boolean checkNet(){
         NetworkManager NetMgr = new NetworkManager();
         if (NetMgr.CheckForInternetAccess(getApplicationContext())){
+            Log.d("ss","ss");
             return true;
         }else{
 
