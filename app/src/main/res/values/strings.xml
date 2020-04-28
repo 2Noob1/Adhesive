@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">Adhesive</string>
+    <string name="dialog_noNetwork_title">No Network Access!</string>
+    <string name="dialog_noNetwork_Message">Your device is not Conncted to the internet, check you connection and try again.</string>
+    <string name="dialog_noNetwork_Positive">Close</string>
+    <string name="loginmenu_Welcome">Welcome!</string>
+    <string name="loginmenu_Desc">Welcome to adhesive, where all brands have stories to tell</string>
+    <string name="loginmenu_loginbutton">Login Here ></string>
+    <string name="loginmenu_registerbutton">Register Here ></string>
+    <string name="loginmenu_loginbutton_desc">Already have an account?</string>
+    <string name="loginmenu_registerbutton_desc">Don\'t have an account?</string>
+
+    <!--Dialog Items-->
+
+</resources>
