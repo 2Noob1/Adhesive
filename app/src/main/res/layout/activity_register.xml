@@ -78,7 +78,7 @@
         android:id="@+id/radioGroup2"
         android:layout_width="198dp"
         android:layout_height="79dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +90,8 @@
             android:layout_height="wrap_content"
             android:text="@string/register_sex_male"
             android:textColor="@color/colorPrimary"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimary"
             android:textSize="20sp" />
 
         <RadioButton
@@ -98,6 +100,8 @@
             android:layout_height="wrap_content"
             android:text="@string/register_sex_feminine"
             android:textColor="@color/colorPrimary"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimary"
             android:textSize="20sp" />
     </RadioGroup>
 
@@ -108,10 +112,14 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/loginpannel_buttons"
         android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:hint="@string/register_datanascimento"
         android:inputType="date"
+        android:onClick="toggledatefragmment"
         android:textColorHint="@color/colorPrimary"
         android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
