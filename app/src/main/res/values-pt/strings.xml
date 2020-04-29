@@ -4,7 +4,7 @@
     <string name="dialog_noNetwork_Message">O Seu Dispositivo não está ligado á internet, verifique e tente novamente.</string>
     <string name="dialog_noNetwork_Positive">Fechar</string>
     <string name="loginmenu_Welcome">Bem-vindo</string>
-    <string name="loginmenu_Desc">Seja bem-vindo á adhesive, onde toas as marcas têm histórias para contar</string>
+    <string name="loginmenu_Desc">Seja bem-vindo á adhesive, onde todas as marcas têm histórias para contar</string>
     <string name="loginmenu_loginbutton">Inicie Sessão ></string>
     <string name="loginmenu_registerbutton">Crie Conta ></string>
     <string name="loginmenu_loginbutton_desc">Já tem conta?</string>
