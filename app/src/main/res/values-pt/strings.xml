@@ -13,4 +13,13 @@
     <string name="login_Desc">Inicie sessão usando as suas credenciais abaixo:</string>
     <string name="login_problems">Está a ter problemas a iniciar sessão?</string>
     <string name="login_donthaveaccount">Não tem conta?</string>
+    <string name="register_title">Criar Conta!</string>
+    <string name="register_desc">Registe-se usando os campos abaixo:</string>
+    <string name="register_name">Nome</string>
+    <string name="register_sex_male">Masculino</string>
+    <string name="register_sex_feminine">Feminino</string>
+    <string name="register_datanascimento">Data de nascimento</string>
+    <string name="register_registerbutton">Criar Conta!</string>
+    <string name="register_alreadyhaveaccount">Já tem conta?</string>
+    <string name="login_problems_button">Clique Aqui</string>
 </resources>
