@@ -9,4 +9,8 @@
     <string name="loginmenu_registerbutton">Crie Conta ></string>
     <string name="loginmenu_loginbutton_desc">Já tem conta?</string>
     <string name="loginmenu_registerbutton_desc">Não tem conta?</string>
+    <string name="login_Title">Iniciar Sessão</string>
+    <string name="login_Desc">Inicie sessão usando as suas credenciais abaixo:</string>
+    <string name="login_problems">Está a ter problemas a iniciar sessão?</string>
+    <string name="login_donthaveaccount">Não tem conta?</string>
 </resources>

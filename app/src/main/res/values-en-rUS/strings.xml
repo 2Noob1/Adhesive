@@ -9,4 +9,8 @@
     <string name="loginmenu_Welcome">Welcome!</string>
     <string name="loginmenu_loginbutton_desc">Already have an account?</string>
     <string name="loginmenu_registerbutton_desc">Don\'t have an account?</string>
+    <string name="login_problems">Having problems loging in?</string>
+    <string name="login_donthaveaccount">Dont have an Account?</string>
+    <string name="login_Desc">Login using your credentials below</string>
+    <string name="login_Title">Login</string>
 </resources>

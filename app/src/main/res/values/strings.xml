@@ -9,6 +9,12 @@
     <string name="loginmenu_registerbutton">Register Here ></string>
     <string name="loginmenu_loginbutton_desc">Already have an account?</string>
     <string name="loginmenu_registerbutton_desc">Don\'t have an account?</string>
+    <string name="login_Title">Login</string>
+    <string name="login_Desc">Login using your credentials below</string>
+    <string name="login_emailHint" translatable="false">Email</string>
+    <string name="login_passwordHint" translatable="false">Password</string>
+    <string name="login_problems">Having problems loging in?</string>
+    <string name="login_donthaveaccount">Dont have an Account?</string>
 
     <!--Dialog Items-->
 
