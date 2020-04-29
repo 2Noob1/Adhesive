@@ -15,7 +15,4 @@
     <string name="login_passwordHint" translatable="false">Password</string>
     <string name="login_problems">Having problems loging in?</string>
     <string name="login_donthaveaccount">Dont have an Account?</string>
-
-    <!--Dialog Items-->
-
 </resources>
