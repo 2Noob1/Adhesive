@@ -15,7 +15,7 @@ public class Launcher extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
-
+// ola //
         Handler hnd = new Handler();
         hnd.postDelayed(new Runnable() {
             @Override
