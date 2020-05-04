@@ -22,4 +22,7 @@
     <string name="register_registerbutton">Criar Conta!</string>
     <string name="register_alreadyhaveaccount">Já tem conta?</string>
     <string name="login_problems_button">Clique Aqui</string>
+    <string name="login_missingfields_title">Espaços em branco detetados</string>
+    <string name="login_missingfields_message">Verifique o email / password para campos em falta e tente novamente</string>
+    <string name="login_missingfield_positive">Fechar</string>
 </resources>
