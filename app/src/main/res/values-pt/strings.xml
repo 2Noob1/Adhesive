@@ -25,4 +25,8 @@
     <string name="login_missingfields_title">Espaços em branco detetados</string>
     <string name="login_missingfields_message">Verifique o email / password para campos em falta e tente novamente</string>
     <string name="login_missingfield_positive">Fechar</string>
+    <string name="login_wrongPasswordEmail_Message">Password / Email Inválido, tente novamente.</string>
+    <string name="login_wrongPasswordEmail_Title">Erro a iniciar sessão</string>
+    <string name="login_loadingpopup_title">A Iniciar Sessão!</string>
+    <string name="login_loadingpopup_message">Aguarde, a verificar credenciais</string>
 </resources>

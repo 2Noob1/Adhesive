@@ -29,4 +29,9 @@
     <string name="login_missingfields_title">Empty fields detected</string>
     <string name="login_missingfields_message">Check your email / password for blank fields and try again.</string>
     <string name="login_missingfield_positive">Close</string>
+    <string name="login_wrongPasswordEmail_Message">Wrong Password/Email try again</string>
+    <string name="login_wrongPasswordEmail_Title">Error Loging in</string>
+    <string name="login_wrongPasswordEmail_Postive" translatable="false">Ok!</string>
+    <string name="login_loadingpopup_title">Log In!</string>
+    <string name="login_loadingpopup_message">Please waiting, check credentials</string>
 </resources>
