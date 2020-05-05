@@ -166,7 +166,6 @@ public class LoginAction extends AppCompatActivity {
                     JSONObject Object = json.getJSONObject(key);
                     //  get id from  issue
                     stringMap.add(Object.optString("Email"));
-                    stringMap.add(Object.optString("Password"));
                     stringMap.add(Object.optString("ResultCode"));
                     stringMap.add(Object.optString("RsultType"));
                     stringMap.add(Object.optString("ResultDesc"));
@@ -178,12 +177,13 @@ public class LoginAction extends AppCompatActivity {
                     error = false;
                 }else{
                     error = true;
-                    Result = "Faild to Login in -> " + stringMap.get(4).toString();
+                    Result = "Faild to Login in -> " + stringMap.get(3).toString();
+                    return Result;
                 }
 
 
                 String filename = "session";
-                String fileContents = "AuthKey:" + stringMap.get(5).toString() + "\nEmail:" + stringMap.get(0).toString();
+                String fileContents = "AuthKey:" + stringMap.get(4).toString() + "\nEmail:" + stringMap.get(0).toString();
                 try (FileOutputStream fos = openFileOutput(filename, MODE_PRIVATE)) {
                     fos.write(fileContents.getBytes());
                 }catch (Exception e){

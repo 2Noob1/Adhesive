@@ -29,4 +29,10 @@
     <string name="login_wrongPasswordEmail_Title">Error Loging in</string>
     <string name="login_loadingpopup_title">Log In!</string>
     <string name="login_loadingpopup_message">Please waiting, check credentials</string>
+    <string name="register_dialogmissingitems_message">Check for empty fields and try again.</string>
+    <string name="register_dialogmissingitems_title">Empty Fields detected</string>
+    <string name="register_progressTitle">Registering...</string>
+    <string name="register_progressMessage">Creating Account</string>
+    <string name="register_failed_title">Error Registering</string>
+    <string name="register_failed_message">Error Creating Account, check details and try again</string>
 </resources>
