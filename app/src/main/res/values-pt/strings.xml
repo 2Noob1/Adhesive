@@ -29,4 +29,10 @@
     <string name="login_wrongPasswordEmail_Title">Erro a iniciar sessão</string>
     <string name="login_loadingpopup_title">A Iniciar Sessão!</string>
     <string name="login_loadingpopup_message">Aguarde, a verificar credenciais</string>
+    <string name="register_dialogmissingitems_title">Campos em falta detetados</string>
+    <string name="register_dialogmissingitems_message">Verifique se preencheu todos os campos e tente novamente</string>
+    <string name="register_progressTitle">A registar...</string>
+    <string name="register_progressMessage">A Criar Conta</string>
+    <string name="register_failed_title">Erro a criar a conta</string>
+    <string name="register_failed_message">Verifique os dados e tente novamente</string>
 </resources>
