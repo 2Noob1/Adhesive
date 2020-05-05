@@ -172,7 +172,7 @@ public class LoginAction extends AppCompatActivity {
                     stringMap.add(Object.optString("AuthToken"));
                 }
                 Log.d("Array",stringMap.toString());
-                if (stringMap.get(2).toString().equalsIgnoreCase("200")){
+                if (stringMap.get(1).toString().equalsIgnoreCase("200")){
                     Result = "Login Done";
                     error = false;
                 }else{

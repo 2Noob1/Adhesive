@@ -23,6 +23,7 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
                 ActivityTranslateTo = new Intent(getApplicationContext(),LoginAction.class);
                 startActivity(ActivityTranslateTo);
+                finishAfterTransition();
             }
         });
 
@@ -32,6 +33,7 @@ public class login extends AppCompatActivity {
             public void onClick(View v) {
                 ActivityTranslateTo = new Intent(getApplicationContext(),Register.class);
                 startActivity(ActivityTranslateTo);
+                finishAfterTransition();
             }
         });
 
