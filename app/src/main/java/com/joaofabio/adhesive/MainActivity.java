@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+    //yolo
     public void flipperImages (int image){
 
         ImageView imageView = new ImageView( this);
