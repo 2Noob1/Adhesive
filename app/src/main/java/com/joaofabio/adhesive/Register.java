@@ -254,7 +254,6 @@ public class Register extends AppCompatActivity {
                     return result;
                 }
 
-
                 String filename = "session";
                 String fileContents = "AuthKey:" + stringMap.get(4).toString() + "\nEmail:" + stringMap.get(0).toString();
                 try (FileOutputStream fos = openFileOutput(filename, MODE_PRIVATE)) {
