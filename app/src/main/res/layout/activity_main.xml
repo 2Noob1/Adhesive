@@ -7,15 +7,6 @@
     tools:context=".MainActivity"
     android:background="@drawable/login_background">
     <!--yolo-->
-    <ViewFlipper
-        android:id="@+id/v_flipper"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
