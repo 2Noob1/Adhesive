@@ -18,13 +18,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageSliderModelList = new ArrayList<>();
+        /*imageSliderModelList = new ArrayList<>();
         sliderView = findViewById(R.id.imageSlider);
 
         imageSliderModelList.add(new ImageSliderModel(R.drawable.a));
         imageSliderModelList.add(new ImageSliderModel(R.drawable.b));
         imageSliderModelList.add(new ImageSliderModel(R.drawable.c));
 
-        sliderView.setSliderAdapter(new ImageSliderAdapter(this,imageSliderModelList));
+        sliderView.setSliderAdapter(new ImageSliderAdapter(this,imageSliderModelList));*/
     }
 }

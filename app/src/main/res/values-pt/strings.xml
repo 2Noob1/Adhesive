@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="dialog_noNetwork_title">Sem Acesso á Internet!</string>
-    <string name="dialog_noNetwork_Message">O Seu Dispositivo não está ligado á internet, verifique e tente novamente.</string>
-    <string name="dialog_noNetwork_Positive">Fechar</string>
     <string name="loginmenu_Welcome">Bem-vindo</string>
     <string name="loginmenu_Desc">Seja bem-vindo á adhesive, onde todas as marcas têm histórias para contar</string>
     <string name="loginmenu_loginbutton">Inicie Sessão ></string>
@@ -35,4 +32,16 @@
     <string name="register_progressMessage">A Criar Conta</string>
     <string name="register_failed_title">Erro a criar a conta</string>
     <string name="register_failed_message">Verifique os dados e tente novamente</string>
+    <string name="dialog_error_Title_4">Sem Acesso á Internet</string>
+    <string name="dialog_error_Message_4">Verifique que tem acesso á internet e tente novamente.</string>
+    <string name="dialog_error_Title_1">Campos Em Falta</string>
+    <string name="dialog_error_Message_1">Verifique se tem capos emf alta e tente novamente</string>
+    <string name="dialog_error_Title_2">Email não está correto</string>
+    <string name="dialog_error_Message_2">Email inválido tente novamente</string>
+    <string name="dialog_error_Title_7">Email em uso</string>
+    <string name="dialog_error_Message_7">Email já em uso, inicie sessão ou recupera a conta no ecrã de login</string>
+    <string name="main_menu_settings">Definições</string>
+    <string name="main_menu_contacts">Contactos</string>
+    <string name="main_menu_gallery">Portfólio</string>
+    <string name="menu_main_initial">ínicio</string>
 </resources>

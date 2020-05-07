@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="dialog_noNetwork_title">No Network Access!</string>
-    <string name="dialog_noNetwork_Message">Your device is not Conncted to the internet, check you connection and try again.</string>
-    <string name="dialog_noNetwork_Positive">Close</string>
     <string name="loginmenu_Welcome">Welcome!</string>
     <string name="loginmenu_Desc">Welcome to adhesive, where all brands have stories to tell</string>
     <string name="loginmenu_loginbutton">Login Here ></string>
@@ -18,7 +15,7 @@
     <string name="register_name">Name</string>
     <string name="register_sex_male">Male</string>
     <string name="register_sex_feminine">Feminine</string>
-    <string name="register_datanascimento">Date of Birth</string>
+    <string name="register_datanascimento">Birthday</string>
     <string name="register_registerbutton">Register!</string>
     <string name="register_alreadyhaveaccount">Already have an account?</string>
     <string name="login_problems_button">Click Here</string>
@@ -35,4 +32,16 @@
     <string name="register_progressMessage">Creating Account</string>
     <string name="register_failed_title">Error Registering</string>
     <string name="register_failed_message">Error Creating Account, check details and try again</string>
+    <string name="dialog_error_Title_4">No Network</string>
+    <string name="dialog_error_Message_4">Check you internet connection and try again.</string>
+    <string name="dialog_error_Message_1">Check for missing fields and try again</string>
+    <string name="dialog_error_Title_1">Missing Fields</string>
+    <string name="dialog_error_Title_2">Incorrect Email</string>
+    <string name="dialog_error_Message_2">Your Email is incorrect try again</string>
+    <string name="dialog_error_Title_7">Email already in use</string>
+    <string name="dialog_error_Message_7">Email already in use, login or recover your acount in the login screen</string>
+    <string name="menu_main_initial">Home</string>
+    <string name="main_menu_gallery">Gallery</string>
+    <string name="main_menu_contacts">Contacts</string>
+    <string name="main_menu_settings">Settings</string>
 </resources>

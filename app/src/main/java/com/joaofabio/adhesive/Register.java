@@ -35,6 +35,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity {
     ProgressDialog dialogLoading;
@@ -68,21 +70,24 @@ public class Register extends AppCompatActivity {
     }
 
     public void doRegister(){
+        Log.d("sss","sss");
         dialogLoading = ProgressDialog.show(this, getResources().getString(R.string.register_progressTitle),
                 getResources().getString(R.string.register_progressMessage), true);
         if (!checkforemptyfields()){
-            NotNetDialog dialog = new NotNetDialog();
+
+            DialogManager dialog = new DialogManager();
             dialog.targetActivity = this;
-            dialog.PositiveText = getResources().getString(R.string.register_dialogmissingitems_positive);
-            dialog.Title = getResources().getString(R.string.register_dialogmissingitems_title);
-            dialog.Message = getResources().getString(R.string.register_dialogmissingitems_message);
+            dialog.ErrorCode = 1;
+            dialog.Critical = false;
             dialog.listener = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    //no Action
+                    //
                 }
             };
-            dialog.show(getSupportFragmentManager(), getResources().getString(R.string.register_dialogmissingitems_title));
+
+            dialog.show(getSupportFragmentManager(),"ErrorDialog");
+            dialogLoading.dismiss();
         }else{
             doHttpRequest request = new doHttpRequest();
             String Sex = "";
@@ -97,8 +102,14 @@ public class Register extends AppCompatActivity {
                     findViewById(R.id.editText4),//Password
                     findViewById(R.id.editText7)//Data Nascimento
             };
+            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+            Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+            Matcher matcher = pattern.matcher(fields[1].getText().toString());
+
             request.execute("https://turma12i.com/JoaoFabio/FCT/RegisterAndroid.php","POST",fields[0].getText().toString(),fields[1].getText().toString(),fields[2].getText().toString(),fields[3].getText().toString(),Sex);
-        }
+
+
+         }
     }
 
     public void toggledatefragmment(View v) {
@@ -133,19 +144,17 @@ public class Register extends AppCompatActivity {
         return true;
     }
 
-    public void ErroRegistering(){
-        NotNetDialog dialog = new NotNetDialog();
+    public void ErrorRegistering(Integer ErrorId){
+        DialogManager dialog = new DialogManager();
         dialog.targetActivity = this;
-        dialog.PositiveText = getResources().getString(R.string.register_failed_positive);
-        dialog.Title = getResources().getString(R.string.register_failed_title);
-        dialog.Message = getResources().getString(R.string.register_failed_message);
+        dialog.ErrorCode = ErrorId;
+        dialog.Critical = false;
         dialog.listener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                //no Action
             }
         };
-        dialog.show(getSupportFragmentManager(), getResources().getString(R.string.register_failed_title));
+        dialog.show(getSupportFragmentManager(),"ErrorDialog");
         dialogLoading.dismiss();
     }
 
@@ -177,6 +186,7 @@ public class Register extends AppCompatActivity {
 
     public class doHttpRequest extends AsyncTask<String,Void,String> {
         Boolean Error = false;
+        Integer ErrorCode = 0;
         @Override
         protected void onPreExecute() {
             Log.d("Async Task",this.toString());
@@ -245,11 +255,12 @@ public class Register extends AppCompatActivity {
                     stringMap.add(Object.optString("AuthToken"));
                 }
                 Log.d("Array",stringMap.toString());
-                if (stringMap.get(1).toString().equalsIgnoreCase("200")){
+                if (stringMap.get(1).toString().equalsIgnoreCase("10")){
                     result = "Register Done";
                     Error = false;
                 }else{
                     Error = true;
+                    ErrorCode = Integer.parseInt(stringMap.get(1).toString());
                     result = "Failed to Register -> " + stringMap.get(3).toString();
                     return result;
                 }
@@ -273,8 +284,8 @@ public class Register extends AppCompatActivity {
         protected void onPostExecute(String s) {
             Log.d("Lol",s);
             if (Error){
-                Log.d("Error",s);
-                ErroRegistering();
+                Log.d("Error",ErrorCode.toString());
+                ErrorRegistering(ErrorCode);
             }else {
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 finishAfterTransition();

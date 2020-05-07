@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/menu_main_initial"
+        android:id="@+id/menu_main_Test1"
+        />
+    <item
+        android:icon="@drawable/ic_photo_album_black_24dp"
+        android:title="@string/main_menu_gallery"
+        android:id="@+id/menu_main_Test2"
+        />
+    <item
+        android:icon="@drawable/ic_email_black_24dp"
+        android:title="@string/main_menu_contacts"
+        android:id="@+id/menu_main_Test3"
+        />
+    <item
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/main_menu_settings"
+        android:id="@+id/menu_main_Test4"
+        />
+</menu>

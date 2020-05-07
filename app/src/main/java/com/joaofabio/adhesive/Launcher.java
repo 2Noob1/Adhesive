@@ -45,11 +45,10 @@ public class Launcher extends AppCompatActivity {
             return true;
         }else{
 
-            NotNetDialog dialog = new NotNetDialog();
+            DialogManager dialog = new DialogManager();
             dialog.targetActivity = this;
-            dialog.PositiveText = getResources().getString(R.string.dialog_noNetwork_Positive);
-            dialog.Title = getResources().getString(R.string.dialog_noNetwork_title);
-            dialog.Message = getResources().getString(R.string.dialog_noNetwork_Message);
+            dialog.ErrorCode = 4;
+            dialog.Critical = true;
             dialog.listener = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -57,7 +56,7 @@ public class Launcher extends AppCompatActivity {
                 }
             };
 
-            dialog.show(getSupportFragmentManager(),getResources().getString(R.string.dialog_noNetwork_title));
+            dialog.show(getSupportFragmentManager(),"ErrorDialog");
 
             return false;
         }
