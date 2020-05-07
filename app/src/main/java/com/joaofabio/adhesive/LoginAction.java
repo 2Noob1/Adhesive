@@ -67,19 +67,17 @@ public class LoginAction extends AppCompatActivity {
         return true;
     }
 
-    public void errorLogin(){
-        NotNetDialog dialog = new NotNetDialog();
+    public void errorLogin(Integer ErrorId){
+        DialogManager dialog = new DialogManager();
         dialog.targetActivity = this;
-        dialog.PositiveText = getResources().getString(R.string.login_wrongPasswordEmail_Postive);
-        dialog.Title = getResources().getString(R.string.login_wrongPasswordEmail_Title);
-        dialog.Message = getResources().getString(R.string.login_wrongPasswordEmail_Message);
+        dialog.ErrorCode = ErrorId;
+        dialog.Critical = false;
         dialog.listener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                //no Action
             }
         };
-        dialog.show(getSupportFragmentManager(), getResources().getString(R.string.login_wrongPasswordEmail_Title));
+        dialog.show(getSupportFragmentManager(),"ErrorDialog");
         dialogLoading.dismiss();
     }
 
@@ -110,6 +108,7 @@ public class LoginAction extends AppCompatActivity {
     }
 
     protected class doHttpLogin extends AsyncTask<String,Void,String>{
+        Integer ErrorCode = 0;
         Boolean error = false;
         @Override
         protected void onPreExecute() {
@@ -172,10 +171,11 @@ public class LoginAction extends AppCompatActivity {
                     stringMap.add(Object.optString("AuthToken"));
                 }
                 Log.d("Array",stringMap.toString());
-                if (stringMap.get(1).toString().equalsIgnoreCase("200")){
+                if (stringMap.get(1).toString().equalsIgnoreCase("9")){
                     Result = "Login Done";
                     error = false;
                 }else{
+                    ErrorCode = Integer.parseInt(stringMap.get(1).toString());
                     error = true;
                     Result = "Faild to Login in -> " + stringMap.get(3).toString();
                     return Result;
@@ -202,7 +202,7 @@ public class LoginAction extends AppCompatActivity {
             Log.d("Lol",s);
             if (error){
                 Log.d("Error",s);
-                errorLogin();
+                errorLogin(ErrorCode);
             }else {
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 finishAfterTransition();

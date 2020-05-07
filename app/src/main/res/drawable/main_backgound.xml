@@ -13,7 +13,7 @@
       android:strokeColor="#00000000"
       android:strokeLineCap="butt"/>
   <path
-      android:pathData="M-43.066,45.117 L177.539,26.953 187.793,-33.398 -72.363,-26.953Z"
+      android:pathData="M-29.59,51.27 L96.68,51.563 149.121,-3.223 -49.219,-3.809Z"
       android:strokeAlpha="1"
       android:strokeLineJoin="miter"
       android:strokeWidth="1"

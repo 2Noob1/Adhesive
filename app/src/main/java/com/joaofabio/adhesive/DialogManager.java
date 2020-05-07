@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import java.lang.reflect.Field;
+import java.util.Objects;
 
 public class DialogManager extends DialogFragment {
 
@@ -38,9 +39,9 @@ public class DialogManager extends DialogFragment {
                 Positive = getResources().getString(R.string.dialog_error_Positive_2);
                 break;
             case 3:
-                //Title = getResources().getString(R.string.dialog_error_Title_3);
-                //Message = getResources().getString(R.string.dialog_error_Message_3);
-                //Positive = getResources().getString(R.string.dialog_error_Positive_3);
+                Title = getResources().getString(R.string.dialog_error_Title_3);
+                Message = getResources().getString(R.string.dialog_error_Message_3);
+                Positive = getResources().getString(R.string.dialog_error_Positive_3);
                 break;
             case 4:
                 Title = getResources().getString(R.string.dialog_error_Title_4);
@@ -53,9 +54,9 @@ public class DialogManager extends DialogFragment {
                 //Positive = getResources().getString(R.string.dialog_error_Positive_5);
                 break;
             case 6:
-                //Title = getResources().getString(R.string.dialog_error_Title_6);
-                //Message = getResources().getString(R.string.dialog_error_Message_6);
-                //Positive = getResources().getString(R.string.dialog_error_Positive_6);
+                Title = getResources().getString(R.string.dialog_error_Title_6);
+                Message = getResources().getString(R.string.dialog_error_Message_6);
+                Positive = getResources().getString(R.string.dialog_error_Positive_6);
                 break;
             case 7:
                 Title = getResources().getString(R.string.dialog_error_Title_7);
@@ -63,9 +64,9 @@ public class DialogManager extends DialogFragment {
                 Positive = getResources().getString(R.string.dialog_error_Positive_7);
                 break;
             case 8:
-                //Title = getResources().getString(R.string.dialog_error_Title_8);
-                //Message = getResources().getString(R.string.dialog_error_Message_8);
-                //Positive = getResources().getString(R.string.dialog_error_Positive_8);
+                Title = getResources().getString(R.string.dialog_error_Title_8);
+                Message = getResources().getString(R.string.dialog_error_Message_8);
+                Positive = getResources().getString(R.string.dialog_error_Positive_8);
                 break;
             case 9:
                 //Title = getResources().getString(R.string.dialog_error_Title_9);
@@ -98,7 +99,7 @@ public class DialogManager extends DialogFragment {
 
     public void onDismiss(@NonNull final DialogInterface dialog) {
        if (Critical){
-           getActivity().finish();
+           Objects.requireNonNull(getActivity()).finish();
        }
     }
 }

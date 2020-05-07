@@ -102,6 +102,8 @@ public class Register extends AppCompatActivity {
                     findViewById(R.id.editText4),//Password
                     findViewById(R.id.editText7)//Data Nascimento
             };
+
+
             String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
             Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(fields[1].getText().toString());
