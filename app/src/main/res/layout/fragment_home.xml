@@ -11,16 +11,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         app:cardCornerRadius="15dp">
+
         <com.smarteist.autoimageslider.SliderView
             android:id="@+id/imageSlider"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="0dp"
-            app:sliderAnimationDuration="600"
-            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAnimationDuration="200"
+            app:sliderAutoCycleDirection="right"
             app:sliderAutoCycleEnabled="true"
-            app:sliderIndicatorAnimationDuration="6000"
+            app:sliderIndicatorAnimationDuration="1000"
             app:sliderIndicatorGravity="center_horizontal|bottom"
             app:sliderIndicatorMargin="15dp"
             app:sliderIndicatorOrientation="horizontal"
