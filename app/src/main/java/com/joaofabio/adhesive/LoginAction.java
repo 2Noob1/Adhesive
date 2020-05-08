@@ -89,18 +89,17 @@ public class LoginAction extends AppCompatActivity {
 
         for (EditText field : Fields) {
             if (field.getText().toString().equalsIgnoreCase("")) {
-                NotNetDialog dialog = new NotNetDialog();
+                DialogManager dialog = new DialogManager();
                 dialog.targetActivity = this;
-                dialog.PositiveText = getResources().getString(R.string.login_missingfield_positive);
-                dialog.Title = getResources().getString(R.string.login_missingfields_title);
-                dialog.Message = getResources().getString(R.string.login_missingfields_message);
+                dialog.ErrorCode = 1;
+                dialog.Critical = false;
                 dialog.listener = new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //no Action
                     }
                 };
-                dialog.show(getSupportFragmentManager(), getResources().getString(R.string.login_missingfields_title));
+                dialog.show(getSupportFragmentManager(),"ErrorDialog");
+                dialogLoading.dismiss();
                 return false;
             }
         }

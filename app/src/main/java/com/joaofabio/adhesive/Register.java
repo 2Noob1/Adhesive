@@ -104,7 +104,7 @@ public class Register extends AppCompatActivity {
             };
 
 
-            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Za-z]{2,4}$";
             Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(fields[1].getText().toString());
 
@@ -134,7 +134,7 @@ public class Register extends AppCompatActivity {
         };
 
         for (TextView tvBuffer : fields){
-            if (tvBuffer.getText().toString().equalsIgnoreCase("")){
+            if (tvBuffer.getText().toString().isEmpty()){
                 return false;
             }
         }

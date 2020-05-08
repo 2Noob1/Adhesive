@@ -2,17 +2,12 @@ package com.joaofabio.adhesive;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.smarteist.autoimageslider.SliderView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,20 +37,17 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new fragment_home();
                             break;
                         case R.id.menu_main_Gallery:
-                            //selectedFragment = new FavoritesFragment();
+                            selectedFragment = new fragment_gallery();
                             break;
                         case R.id.menu_main_Contacts:
-                            //selectedFragment = new SearchFragment();
+                            selectedFragment = new fragment_contacts();
                             break;
                         case R.id.menu_main_Settings:
-                            //selectedFragment = new SearchFragment();
+                            selectedFragment = new fragment_settings();
                             break;
                     }
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.FragmentView,
-                            selectedFragment).commit();
-
+                    getSupportFragmentManager().beginTransaction().replace(R.id.FragmentView, selectedFragment).commit();
                     return true;
                 }
-            };
+    };
 }
