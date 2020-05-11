@@ -54,4 +54,15 @@
     <string name="login_missingfield_positive">Close</string>
     <string name="fragment_home_text_1">We are a Branding + Digital studio that works, in close proximity to partners, companies and consumers, brands that communicate stories with soul and in personalized printed and digital experiences.</string>
     <string name="fragment_home_text_2">It is formed by a passionate and attentive team, adjustable to the objectives and budget of each project, working in different business sectors and demographic contexts.</string>
+    <string name="settings_account_title">Account</string>
+    <string name="settings_account_changepersonaldata">Change Personal Data</string>
+    <string name="settings_account_changePassword">Change Password</string>
+    <string name="settings_account_logout">Log Out</string>
+    <string name="settings_account_deactivate">Deactivate Account</string>
+    <string name="settings_application_title">Application</string>
+    <string name="settings_application_theme">Theme</string>
+    <string name="settings_legal_title">Legal Information</string>
+    <string name="settings_legal_OpenSourceLicenses">Open Souce Licenses</string>
+    <string name="settings_legal_closedsource">Closed Source Licenses</string>
+    <string name="settings_legal_privacy">Privacy statement</string>
 </resources>

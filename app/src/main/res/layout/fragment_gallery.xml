@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:text="@string/main_menu_gallery"
-        android:textSize="50dp"
+        android:textSize="50sp"
         android:gravity="center"
         android:textColor="@android:color/white"
         android:fontFamily="sans-serif-black"
@@ -48,23 +48,24 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Titulo do Projeto" />
+                        android:text="C.M. DO BARREIRO" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Titulo do Projeto" />
+                        android:text="Criação de marca e identidade corporativa, conceito criativo e imagem gráfica de campanha, design gráfico de peças de comunicação e merchandising de suporte às campanhas, criação de presença online do evento" />
 
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
                         android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
                         android:text="Mais Info"
@@ -97,23 +98,24 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Titulo do Projeto" />
+                        android:text="GRUPO MEDINFAR" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Titulo do Projeto" />
+                        android:text="UX Design e implementação de E-detailings para os delegados de informação médica" />
 
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
                         android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
                         android:text="Mais Info"
@@ -146,23 +148,25 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Titulo do Projeto" />
+                        android:text="HERDADE DOS OUTEIROS ALTOS" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Titulo do Projeto" />
+                        android:text="Criação de marca, comunicação institucional, design de rótulos de vinho e presença online da marca.
+" />
 
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
                         android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
                         android:text="Mais Info"
@@ -195,23 +199,24 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Titulo do Projeto" />
+                        android:text="PROGENIE ENGINEERING" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Titulo do Projeto" />
+                        android:text="Redesign de marca, criação da comunicação institucional e presença online da marca." />
 
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
                         android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
                         android:text="Mais Info"
@@ -245,23 +250,24 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Titulo do Projeto" />
+                        android:text="GRUPO MEDINFAR" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Titulo do Projeto" />
+                        android:text="Criação de marca e design de rótulos" />
 
                     <Button
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
                         android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
                         android:text="Mais Info"

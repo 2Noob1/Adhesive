@@ -54,4 +54,15 @@
     <string name="login_missingfield_positive">Fechar</string>
     <string name="fragment_home_text_1">Somos um estúdio de Branding + Digital que trabalha, em proximidade com parceiros, empresas e consumidores, marcas que comunicam histórias com alma e em experiências impressas e digitais personalizadas.</string>
     <string name="fragment_home_text_2">É formado por uma equipe apaixonada e atenta ao detalhe, ajustável aos objetivos e ao orçamento de cada projeto, que trabalha diferentes setores de negócios e contextos demográficos.</string>
+    <string name="settings_account_title">Conta</string>
+    <string name="settings_account_changepersonaldata">Aletar dados pessoais</string>
+    <string name="settings_account_changePassword">Alterar Password</string>
+    <string name="settings_account_logout">Terminar Sessão</string>
+    <string name="settings_account_deactivate">Desativar Conta</string>
+    <string name="settings_application_title">Aplicação</string>
+    <string name="settings_application_theme">Tema</string>
+    <string name="settings_legal_title">Informações Jurídicas</string>
+    <string name="settings_legal_OpenSourceLicenses">Licensas de Código Aberto</string>
+    <string name="settings_legal_closedsource">Licensas de Código Fechado</string>
+    <string name="settings_legal_privacy">Decalração de privacidade</string>
 </resources>
