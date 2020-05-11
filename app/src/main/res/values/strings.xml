@@ -72,4 +72,5 @@
     <string name="dialog_error_Positive_5" translatable="false">Ok</string>
     <string name="fragment_home_text_1">"We are a Branding + Digital studio that works, in close proximity to partners, companies and consumers, brands that communicate stories with soul and in personalized printed and digital experiences. "</string>
     <string name="fragment_home_text_2">It is formed by a passionate and attentive team, adjustable to the objectives and budget of each project, working in different business sectors and demographic contexts.</string>
+    <string name="title_activity_fragment_contacts1">Map</string>
 </resources>
