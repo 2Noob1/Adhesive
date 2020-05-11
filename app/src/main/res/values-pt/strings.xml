@@ -50,7 +50,7 @@
     <string name="dialog_error_Title_6">Password Inválida</string>
     <string name="dialog_error_Message_6">Password introduzida não combina com os nossos registos, tente novemnte</string>
     <string name="dialog_error_Title_5">Sessaõ Invália</string>
-    <string name="dialog_error_Message_5">O seu token de autenticação é inválido, inicie sessão novamente</string>
+    <string name="dialog_error_Message_5">O seu token de autenticação é inválido, ou sessão iniciado em outo dispositivo , inicie sessão novamente</string>
     <string name="login_missingfield_positive">Fechar</string>
     <string name="fragment_home_text_1">Somos um estúdio de Branding + Digital que trabalha, em proximidade com parceiros, empresas e consumidores, marcas que comunicam histórias com alma e em experiências impressas e digitais personalizadas.</string>
     <string name="fragment_home_text_2">É formado por uma equipe apaixonada e atenta ao detalhe, ajustável aos objetivos e ao orçamento de cada projeto, que trabalha diferentes setores de negócios e contextos demográficos.</string>

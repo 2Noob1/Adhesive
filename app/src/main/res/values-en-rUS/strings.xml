@@ -50,7 +50,7 @@
     <string name="dialog_error_Title_6">Invalid Password</string>
     <string name="dialog_error_Message_6">Password Doesnt macth with our records, try again</string>
     <string name="dialog_error_Title_5">Invalid Session</string>
-    <string name="dialog_error_Message_5">Your Session token was inválid, log in again,</string>
+    <string name="dialog_error_Message_5">Your Session token was inválid,or logged in on another device, log in again,</string>
     <string name="login_missingfield_positive">Close</string>
     <string name="fragment_home_text_1">We are a Branding + Digital studio that works, in close proximity to partners, companies and consumers, brands that communicate stories with soul and in personalized printed and digital experiences.</string>
     <string name="fragment_home_text_2">It is formed by a passionate and attentive team, adjustable to the objectives and budget of each project, working in different business sectors and demographic contexts.</string>

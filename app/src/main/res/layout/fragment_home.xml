@@ -4,9 +4,28 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/launcher_logo"
+        android:contentDescription="TODO"
+        android:layout_gravity="center_horizontal"
+        android:tint="@android:color/white"/>
+
+    <ScrollView
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
 
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="10dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -34,32 +53,28 @@
 
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/launcher_logo"
-        android:contentDescription="TODO"
-        android:layout_gravity="center_horizontal"
-        android:tint="@android:color/white"/>
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="370dp"
+        android:layout_width="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif"
         android:textSize="20sp"
         android:text="@string/fragment_home_text_1" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="370dp"
+        android:layout_width="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="580dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif"
         android:textSize="20sp"
         android:text="@string/fragment_home_text_2" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
