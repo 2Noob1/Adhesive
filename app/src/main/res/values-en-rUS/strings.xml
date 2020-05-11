@@ -21,7 +21,6 @@
     <string name="login_problems_button">Click Here</string>
     <string name="login_missingfields_title">Empty fields detected</string>
     <string name="login_missingfields_message">Check your email / password for blank fields and try again.</string>
-    <string name="login_missingfield_positive" translatable="false">Close</string>
     <string name="login_wrongPasswordEmail_Message">Wrong Password/Email try again</string>
     <string name="login_wrongPasswordEmail_Title">Error Loging in</string>
     <string name="login_loadingpopup_title">Log In!</string>
@@ -50,4 +49,7 @@
     <string name="dialog_error_Message_3">Server Encountered an error, try again later</string>
     <string name="dialog_error_Title_6">Invalid Password</string>
     <string name="dialog_error_Message_6">Password Doesnt macth with our records, try again</string>
+    <string name="dialog_error_Title_5">Invalid Session</string>
+    <string name="dialog_error_Message_5">Your Session token was inválid, log in again,</string>
+    <string name="login_missingfield_positive">Close</string>
 </resources>

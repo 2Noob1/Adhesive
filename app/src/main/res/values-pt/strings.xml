@@ -21,7 +21,6 @@
     <string name="login_problems_button">Clique Aqui</string>
     <string name="login_missingfields_title">Espaços em branco detetados</string>
     <string name="login_missingfields_message">Verifique o email / password para campos em falta e tente novamente</string>
-    <string name="login_missingfield_positive">Fechar</string>
     <string name="login_wrongPasswordEmail_Message">Password / Email Inválido, tente novamente.</string>
     <string name="login_wrongPasswordEmail_Title">Erro a iniciar sessão</string>
     <string name="login_loadingpopup_title">A Iniciar Sessão!</string>
@@ -50,4 +49,7 @@
     <string name="dialog_error_Message_3">Ocurreu um erro de servidor, tente novamente mais tarde</string>
     <string name="dialog_error_Title_6">Password Inválida</string>
     <string name="dialog_error_Message_6">Password introduzida não combina com os nossos registos, tente novemnte</string>
+    <string name="dialog_error_Title_5">Sessaõ Invália</string>
+    <string name="dialog_error_Message_5">O seu token de autenticação é inválido, inicie sessão novamente</string>
+    <string name="login_missingfield_positive">Fechar</string>
 </resources>

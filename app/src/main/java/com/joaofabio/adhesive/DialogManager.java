@@ -3,7 +3,9 @@ package com.joaofabio.adhesive;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,18 +18,20 @@ import java.util.Objects;
 public class DialogManager extends DialogFragment {
 
     int ErrorCode;
-    Activity targetActivity;
+    Activity targetActivity = null;
     boolean Critical;
+    boolean redirects = false;
     DialogInterface.OnClickListener listener;
     private String Title;
     private String Message;
     private String Positive;
+    public Class redirecytClass;
 
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
 
-        switch(ErrorCode){
+        switch (ErrorCode) {
             case 1:
                 Title = getResources().getString(R.string.dialog_error_Title_1);
                 Message = getResources().getString(R.string.dialog_error_Message_1);
@@ -49,9 +53,9 @@ public class DialogManager extends DialogFragment {
                 Positive = getResources().getString(R.string.dialog_error_Positive_4);
                 break;
             case 5:
-                //Title = getResources().getString(R.string.dialog_error_Title_5);
-                //Message = getResources().getString(R.string.dialog_error_Message_5);
-                //Positive = getResources().getString(R.string.dialog_error_Positive_5);
+                Title = getResources().getString(R.string.dialog_error_Title_5);
+                Message = getResources().getString(R.string.dialog_error_Message_5);
+                Positive = getResources().getString(R.string.dialog_error_Positive_5);
                 break;
             case 6:
                 Title = getResources().getString(R.string.dialog_error_Title_6);
@@ -90,16 +94,20 @@ public class DialogManager extends DialogFragment {
                 break;
         }
 
-        AlertDialog.Builder builder =  new AlertDialog.Builder(targetActivity);
+        if (targetActivity == null){
+            targetActivity  = getActivity();
+        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(targetActivity);
         builder.setTitle(Title)
                 .setMessage(Message)
                 .setPositiveButton(Positive, listener);
         return builder.create();
     }
 
-    public void onDismiss(@NonNull final DialogInterface dialog) {
-       if (Critical){
-           Objects.requireNonNull(getActivity()).finish();
-       }
+    @Override
+    public void onDismiss(@NonNull DialogInterface dialog) {
+        if (Critical){
+            Objects.requireNonNull(getActivity()).finish();
+        }
     }
 }

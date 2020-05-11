@@ -57,7 +57,7 @@
     <string name="main_menu_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="dialog_error_Title_8">No user found</string>
     <string name="dialog_error_Message_8">No user found with that email,check your email and try again</string>
     <string name="dialog_error_Positive_8" translatable="false">Ok</string>
@@ -67,4 +67,7 @@
     <string name="dialog_error_Title_6">Invalid Password</string>
     <string name="dialog_error_Message_6">Password Doesnt macth with our records, try again</string>
     <string name="dialog_error_Positive_6" translatable="false">Ok</string>
+    <string name="dialog_error_Title_5">Invalid Session</string>
+    <string name="dialog_error_Message_5">Your Session token was inválid, log in again,</string>
+    <string name="dialog_error_Positive_5" translatable="false">Ok</string>
 </resources>
