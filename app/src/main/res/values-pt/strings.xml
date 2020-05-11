@@ -65,4 +65,10 @@
     <string name="settings_legal_OpenSourceLicenses">Licensas de Código Aberto</string>
     <string name="settings_legal_closedsource">Licensas de Código Fechado</string>
     <string name="settings_legal_privacy">Decalração de privacidade</string>
+    <string name="dialog_error_Title_13">Falha ao termiar Sessão</string>
+    <string name="dialog_error_Message_13">Não foi possivel termiar sessão, tente novamente</string>
+    <string name="dialog_logout_title">Tem a certeza</string>
+    <string name="dialog_logout_message">Tens a certeza que queres terminar sessão</string>
+    <string name="dialog_logout_positive">Sim</string>
+    <string name="dialog_logout_negative">No</string>
 </resources>

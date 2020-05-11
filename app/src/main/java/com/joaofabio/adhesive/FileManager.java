@@ -30,4 +30,8 @@ public class FileManager {
         }
     }
 
+    public boolean removeFile(){
+        return file.delete();
+    }
+
 }

@@ -92,6 +92,11 @@ public class DialogManager extends DialogFragment {
                 //Message = getResources().getString(R.string.dialog_error_Message_12);
                 //Positive = getResources().getString(R.string.dialog_error_Positive_12);
                 break;
+            case 13:
+                Title = getResources().getString(R.string.dialog_error_Title_13);
+                Message = getResources().getString(R.string.dialog_error_Message_13);
+                Positive = getResources().getString(R.string.dialog_error_Positive_13);
+                break;
         }
 
         if (targetActivity == null){

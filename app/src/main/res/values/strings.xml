@@ -83,4 +83,11 @@
     <string name="settings_legal_OpenSourceLicenses">Open Souce Licenses</string>
     <string name="settings_legal_closedsource">Closed Source Licenses</string>
     <string name="settings_legal_privacy">Privacy statement</string>
+    <string name="dialog_error_Title_13">LogOut Failed</string>
+    <string name="dialog_error_Message_13">Error loggin you out, try again,</string>
+    <string name="dialog_error_Positive_13" translatable="false">Ok</string>
+    <string name="dialog_logout_title">Are you sure?</string>
+    <string name="dialog_logout_message">Are you sure you want to logout?</string>
+    <string name="dialog_logout_positive">Yes</string>
+    <string name="dialog_logout_negative">No</string>
 </resources>
