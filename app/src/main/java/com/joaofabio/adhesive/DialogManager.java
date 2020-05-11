@@ -30,7 +30,8 @@ public class DialogManager extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-
+        //this is bullshit, there is defenitly a better way to do this but im too lazy to search
+        //this is not automatic i had to fucking type every error code manually in the switch ffs
         switch (ErrorCode) {
             case 1:
                 Title = getResources().getString(R.string.dialog_error_Title_1);
@@ -106,11 +107,13 @@ public class DialogManager extends DialogFragment {
         builder.setTitle(Title)
                 .setMessage(Message)
                 .setPositiveButton(Positive, listener);
+        //Missing Fucking negative button
         return builder.create();
     }
 
     @Override
     public void onDismiss(@NonNull DialogInterface dialog) {
+        //Just Lazy
         if (Critical){
             Objects.requireNonNull(getActivity()).finish();
         }

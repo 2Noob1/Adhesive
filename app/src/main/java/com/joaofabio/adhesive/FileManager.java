@@ -9,7 +9,7 @@ public class FileManager {
 
     private File file = null;
 
-
+    //checks for file pretty obvious
     public boolean checkforfile(){
         if (file == null){
             throw new NullPointerException("No File Was Selected, cannot test an null file");
@@ -21,7 +21,7 @@ public class FileManager {
         }
     }
 
-    public boolean openFile(Context context,String... strings){
+    public boolean openFile(Context context,String... strings){//there must be a better way to get a
         file = new File(context.getFilesDir() + "/" +strings[0]);
         if (file == null){
             return false;
@@ -31,6 +31,7 @@ public class FileManager {
     }
 
     public boolean removeFile(){
+        //Pretty simple
         return file.delete();
     }
 

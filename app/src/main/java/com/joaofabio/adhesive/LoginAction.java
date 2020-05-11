@@ -156,6 +156,7 @@ public class LoginAction extends AppCompatActivity {
                 return e.toString();
             }
             try{
+                //there is a better way to convert json into an stringMap other than this bullshit
                 final JSONObject json = new JSONObject(Result);
                 Iterator iterator = json.keys();
                 ArrayList stringMap = new ArrayList();

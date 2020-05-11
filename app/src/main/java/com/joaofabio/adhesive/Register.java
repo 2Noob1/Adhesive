@@ -104,9 +104,9 @@ public class Register extends AppCompatActivity {
             };
 
 
-            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Za-z]{2,4}$";
+            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Za-z]{2,4}$"; //this is fucking useless
             Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-            Matcher matcher = pattern.matcher(fields[1].getText().toString());
+            Matcher matcher = pattern.matcher(fields[1].getText().toString());//this doesnt return nothing else than true so its pretty fucking useless
 
             request.execute("https://turma12i.com/JoaoFabio/FCT/RegisterAndroid.php","POST",fields[0].getText().toString(),fields[1].getText().toString(),fields[2].getText().toString(),fields[3].getText().toString(),Sex);
 
@@ -180,7 +180,7 @@ public class Register extends AppCompatActivity {
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            tv.setText(year + "-" + (month + 1) + "-" + day);
+//Again too lazy to search a better way to get date from a claendar freagment tha this fucking bullshit
         }
     }
 
@@ -211,6 +211,7 @@ public class Register extends AppCompatActivity {
                 Connection.setReadTimeout(1200);
 
                 //Headers
+                //There must a a more secure way to send data tha this peace of crap
                 Connection.setRequestProperty("Name",strings[2]);
                 Connection.setRequestProperty("Email",strings[3]);
                 Connection.setRequestProperty("Password",strings[4]);
@@ -243,6 +244,7 @@ public class Register extends AppCompatActivity {
 
             Log.d("RegisterDEBUG",result);
             try{
+                //again there is defenitly a way to get better json to stringMap
                 final JSONObject json = new JSONObject(result);
                 Iterator iterator = json.keys();
                 ArrayList stringMap = new ArrayList();
@@ -267,6 +269,7 @@ public class Register extends AppCompatActivity {
                     return result;
                 }
 
+                //there are so many secure ways to do this inseted o securing a encripted key
                 String filename = "session";
                 String fileContents = "AuthKey:" + stringMap.get(4).toString() + "\nEmail:" + stringMap.get(0).toString();
                 try (FileOutputStream fos = openFileOutput(filename, MODE_PRIVATE)) {
