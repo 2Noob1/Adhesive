@@ -21,11 +21,12 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="@string/gallery_projectDetails"
                 android:fontFamily="sans-serif-black"
                 android:textSize="35sp"
                 android:layout_gravity="center"
+                android:background="@drawable/loginpannel_buttons"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/colorPrimary"/>
 
@@ -96,8 +97,9 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="@string/gallery_projectGallery"
+                android:background="@drawable/loginpannel_buttons"
                 android:fontFamily="sans-serif-black"
                 android:textSize="35sp"
                 android:layout_gravity="center"
