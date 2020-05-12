@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -45,6 +46,7 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
         LatLng Adhevise = new LatLng(38.636580908361516,-9.105661788968442);
         map.addMarker(new MarkerOptions().position(Adhevise).title("Adhevise"));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(Adhevise,15));
+        map.setMapType(map.MAP_TYPE_SATELLITE);
     }
 
     @Override

@@ -16,6 +16,7 @@ public class gallery_fullscreen extends AppCompatActivity {
     SliderView sliderView;
     List<ImageSliderModel> imageSliderModelList;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

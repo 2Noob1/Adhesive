@@ -20,7 +20,10 @@
         <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyABKFW411Pgb2zzmllt8xWJISM0UyRzG4o"/>
-        <activity android:name=".gallery_fullscreen"></activity>
+        <activity
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:name=".gallery_fullscreen" />
         <activity
             android:name=".Register"
             android:screenOrientation="portrait"
