@@ -71,4 +71,10 @@
     <string name="dialog_logout_message">Are you sure you want to logout?</string>
     <string name="dialog_logout_positive">Yes</string>
     <string name="dialog_logout_negative">No</string>
+    <string name="gallery_project1_Message">Creation of brand and corporate identity, creative concept and graphic image of campaign, graphic design of communication pieces and merchandising to support campaigns, creation of online presence of the event</string>
+    <string name="gallery_moreinfo">More Info +</string>
+    <string name="gallery_project2_message">UX Design and implementation of E-detailings for medical information delegates</string>
+    <string name="gallery_project3_message">Brand creation, institutional communication, wine label design and online brand presence.</string>
+    <string name="gallery_project4_message">Brand redesign, creation of institutional communication and online brand presence.</string>
+    <string name="gallery_project5_message">Brand creation and label design</string>
 </resources>

@@ -27,7 +27,7 @@
     <string name="login_loadingpopup_message">Aguarde, a verificar credenciais</string>
     <string name="register_dialogmissingitems_title">Campos em falta detetados</string>
     <string name="register_dialogmissingitems_message">Verifique se preencheu todos os campos e tente novamente</string>
-    <string name="register_progressTitle">A registar...</string>
+    <string name="register_progressTitle">A registar…</string>
     <string name="register_progressMessage">A Criar Conta</string>
     <string name="register_failed_title">Erro a criar a conta</string>
     <string name="register_failed_message">Verifique os dados e tente novamente</string>
@@ -66,9 +66,15 @@
     <string name="settings_legal_closedsource">Licensas de Código Fechado</string>
     <string name="settings_legal_privacy">Decalração de privacidade</string>
     <string name="dialog_error_Title_13">Falha ao termiar Sessão</string>
-    <string name="dialog_error_Message_13">Não foi possivel termiar sessão, tente novamente</string>
+    <string name="dialog_error_Message_13">Não foi possível termiar sessão, tente novamente</string>
     <string name="dialog_logout_title">Tem a certeza</string>
     <string name="dialog_logout_message">Tens a certeza que queres terminar sessão</string>
     <string name="dialog_logout_positive">Sim</string>
     <string name="dialog_logout_negative">No</string>
+    <string name="gallery_project1_Message">Criação de marca e identidade corporativa, conceito criativo e imagem gráfica de campanha,design gráfico de peças de comunicação e merchandising de suporte às campanhas, criação de presença online do evento</string>
+    <string name="gallery_moreinfo">Mais Informação</string>
+    <string name="gallery_project2_message">UX Design e implementação de E-detailings para os delegados de informação médica</string>
+    <string name="gallery_project3_message">Criação de marca, comunicação institucional, design de rótulos de vinho e presença online da marca.</string>
+    <string name="gallery_project4_message">Redesign de marca, criação da comunicação institucional e presença online da marca.</string>
+    <string name="gallery_project5_message">Criação de marca e design de rótulos</string>
 </resources>

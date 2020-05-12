@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -39,7 +40,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:src="@drawable/p1"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/gallery_project1_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -48,7 +50,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="C.M. DO BARREIRO" />
+                        android:text="@string/gallery_project1_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -58,7 +60,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Criação de marca e identidade corporativa, conceito criativo e imagem gráfica de campanha, design gráfico de peças de comunicação e merchandising de suporte às campanhas, criação de presença online do evento" />
+                        android:text="@string/gallery_project1_Message" />
 
                     <Button
                         android:layout_width="100dp"
@@ -68,8 +70,9 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
-                        android:text="Mais Info"
-                        android:textColor="@color/colorPrimary" />
+                        android:text="@string/gallery_moreinfo"
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="RtlHardcoded" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -89,7 +92,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:src="@drawable/p2"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/gallery_project2_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -98,7 +102,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="GRUPO MEDINFAR" />
+                        android:text="@string/gallery_project2_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -108,7 +112,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="UX Design e implementação de E-detailings para os delegados de informação médica" />
+                        android:text="@string/gallery_project2_message" />
 
                     <Button
                         android:layout_width="100dp"
@@ -118,8 +122,9 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
-                        android:text="Mais Info"
-                        android:textColor="@color/colorPrimary" />
+                        android:text="@string/gallery_moreinfo"
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="RtlHardcoded" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -139,7 +144,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:src="@drawable/p3"
-                        android:scaleType="centerCrop"  />
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/gallery_project3_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -148,7 +154,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="HERDADE DOS OUTEIROS ALTOS" />
+                        android:text="@string/gallery_project3_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -158,8 +164,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Criação de marca, comunicação institucional, design de rótulos de vinho e presença online da marca.
-" />
+                        android:text="@string/gallery_project3_message" />
 
                     <Button
                         android:layout_width="100dp"
@@ -169,8 +174,9 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
-                        android:text="Mais Info"
-                        android:textColor="@color/colorPrimary" />
+                        android:text="@string/gallery_moreinfo"
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="RtlHardcoded" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -190,7 +196,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:src="@drawable/p4"
-                        android:scaleType="centerCrop"  />
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/gallery_project4_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -199,7 +206,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="PROGENIE ENGINEERING" />
+                        android:text="@string/gallery_project4_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -209,7 +216,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Redesign de marca, criação da comunicação institucional e presença online da marca." />
+                        android:text="@string/gallery_project4_message" />
 
                     <Button
                         android:layout_width="100dp"
@@ -219,8 +226,9 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
-                        android:text="Mais Info"
-                        android:textColor="@color/colorPrimary" />
+                        android:text="@string/gallery_moreinfo"
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="RtlHardcoded" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -241,7 +249,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:src="@drawable/p5"
-                        android:scaleType="centerCrop"  />
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/gallery_project5_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -250,7 +259,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="GRUPO MEDINFAR" />
+                        android:text="@string/gallery_project5_title" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -260,7 +269,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Criação de marca e design de rótulos" />
+                        android:text="@string/gallery_project5_message" />
 
                     <Button
                         android:layout_width="100dp"
@@ -270,8 +279,9 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
-                        android:text="Mais Info"
-                        android:textColor="@color/colorPrimary" />
+                        android:text="@string/gallery_moreinfo"
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="RtlHardcoded" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

@@ -34,7 +34,7 @@
     <string name="register_dialogmissingitems_title">Empty Fields detected</string>
     <string name="register_dialogmissingitems_message">Check for empty fields and try again.</string>
     <string name="register_dialogmissingitems_positive" translatable="false">Ok</string>
-    <string name="register_progressTitle">Registering...</string>
+    <string name="register_progressTitle">Registering…</string>
     <string name="register_progressMessage">Creating Account</string>
     <string name="register_failed_title">Error Registering</string>
     <string name="register_failed_message">Error Creating Account, check details and try again</string>
@@ -55,8 +55,6 @@
     <string name="main_menu_gallery">Gallery</string>
     <string name="main_menu_contacts">Contacts</string>
     <string name="main_menu_settings">Settings</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="dialog_error_Title_8">No user found</string>
     <string name="dialog_error_Message_8">No user found with that email,check your email and try again</string>
@@ -90,4 +88,15 @@
     <string name="dialog_logout_message">Are you sure you want to logout?</string>
     <string name="dialog_logout_positive">Yes</string>
     <string name="dialog_logout_negative">No</string>
+    <string name="gallery_project1_title" translatable="false">C.M Do Barreiro</string>
+    <string name="gallery_project1_Message">Creation of brand and corporate identity, creative concept and graphic image of campaign, graphic design of communication pieces and merchandising to support campaigns, creation of online presence of the event</string>
+    <string name="gallery_moreinfo">More Info +</string>
+    <string name="gallery_project2_title" translatable="false">Grupo Medinfar</string>
+    <string name="gallery_project2_message">UX Design and implementation of E-detailings for medical information delegates</string>
+    <string name="gallery_project3_title" translatable="false">Herdade Dos Outeiros Altos</string>
+    <string name="gallery_project3_message">Brand creation, institutional communication, wine label design and online brand presence.</string>
+    <string name="gallery_project4_title" translatable="false">Progenie Engineering</string>
+    <string name="gallery_project4_message">Brand redesign, creation of institutional communication and online brand presence.</string>
+    <string name="gallery_project5_title" translatable="false">Grupo Medinfar</string>
+    <string name="gallery_project5_message">Brand creation and label design</string>
 </resources>
