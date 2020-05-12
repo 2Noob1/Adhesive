@@ -22,10 +22,10 @@
             android:orientation="vertical">
 
             <com.google.android.gms.maps.MapView
-                android:id="@+id/mapView"
+                android:id="@+id/map"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_gravity="bottom"/>
         </LinearLayout>
     </ScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

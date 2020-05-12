@@ -63,6 +63,7 @@
                         android:text="@string/gallery_project1_Message" />
 
                     <Button
+                        android:id="@+id/project1"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
@@ -115,6 +116,7 @@
                         android:text="@string/gallery_project2_message" />
 
                     <Button
+                        android:id="@+id/project2"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
@@ -167,6 +169,7 @@
                         android:text="@string/gallery_project3_message" />
 
                     <Button
+                        android:id="@+id/project3"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
@@ -219,6 +222,7 @@
                         android:text="@string/gallery_project4_message" />
 
                     <Button
+                        android:id="@+id/project4"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
@@ -272,6 +276,7 @@
                         android:text="@string/gallery_project5_message" />
 
                     <Button
+                        android:id="@+id/project5"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_gravity="right"
