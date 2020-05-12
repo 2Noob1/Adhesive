@@ -17,7 +17,7 @@
                 android:layout_height="200dp"
                 android:src="@drawable/p1"
                 android:scaleType="centerCrop"
-                android:contentDescription="TODO" />
+                android:contentDescription="shuit up" />
 
             <TextView
                 android:layout_width="wrap_content"
