@@ -14,11 +14,7 @@ public class FileManager {
         if (file == null){
             throw new NullPointerException("No File Was Selected, cannot test an null file");
         }
-        if (file.exists()){
-            return true;
-        }else{
-            return false;
-        }
+        return file.exists();
     }
 
     public boolean openFile(Context context,String... strings){//there must be a better way to get a

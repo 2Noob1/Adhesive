@@ -11,7 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -20,11 +19,8 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.zip.Checksum;
 
 public class LoginAction extends AppCompatActivity {
     ProgressDialog dialogLoading;
@@ -158,10 +154,10 @@ public class LoginAction extends AppCompatActivity {
             try{
                 //there is a better way to convert json into an stringMap other than this bullshit
                 final JSONObject json = new JSONObject(Result);
-                Iterator iterator = json.keys();
-                ArrayList stringMap = new ArrayList();
+                Iterator<String> iterator = json.keys();
+                ArrayList<String> stringMap = new ArrayList<>();
                 while(iterator.hasNext()){
-                    String key = (String)iterator.next();
+                    String key = iterator.next();
                     JSONObject Object = json.getJSONObject(key);
                     //  get id from  issue
                     stringMap.add(Object.optString("Email"));

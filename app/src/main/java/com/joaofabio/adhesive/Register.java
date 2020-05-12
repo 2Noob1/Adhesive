@@ -11,10 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.renderscript.ScriptGroup;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -23,14 +20,12 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.CollationElementIterator;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
@@ -246,10 +241,10 @@ public class Register extends AppCompatActivity {
             try{
                 //again there is defenitly a way to get better json to stringMap
                 final JSONObject json = new JSONObject(result);
-                Iterator iterator = json.keys();
-                ArrayList stringMap = new ArrayList();
+                Iterator<String> iterator = json.keys();
+                ArrayList<String> stringMap = new ArrayList<>();
                 while(iterator.hasNext()){
-                    String key = (String)iterator.next();
+                    String key = iterator.next();
                     JSONObject Object = json.getJSONObject(key);
                     //  get id from  issue
                     stringMap.add(Object.optString("Email"));
