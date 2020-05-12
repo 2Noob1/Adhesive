@@ -34,7 +34,7 @@
     <string name="register_dialogmissingitems_title">Empty Fields detected</string>
     <string name="register_dialogmissingitems_message">Check for empty fields and try again.</string>
     <string name="register_dialogmissingitems_positive" translatable="false">Ok</string>
-    <string name="register_progressTitle">Registering...</string>
+    <string name="register_progressTitle">Registering…</string>
     <string name="register_progressMessage">Creating Account</string>
     <string name="register_failed_title">Error Registering</string>
     <string name="register_failed_message">Error Creating Account, check details and try again</string>
@@ -55,8 +55,6 @@
     <string name="main_menu_gallery">Gallery</string>
     <string name="main_menu_contacts">Contacts</string>
     <string name="main_menu_settings">Settings</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="dialog_error_Title_8">No user found</string>
     <string name="dialog_error_Message_8">No user found with that email,check your email and try again</string>
@@ -65,13 +63,42 @@
     <string name="dialog_error_Message_3">Server Encountered an error, try again later</string>
     <string name="dialog_error_Positive_3" translatable="false">Ok</string>
     <string name="dialog_error_Title_6">Invalid Password</string>
-    <string name="dialog_error_Message_6">Password Doesnt macth with our records, try again</string>
+    <string name="dialog_error_Message_6">Password Doesn\'t macth with our records, try again</string>
     <string name="dialog_error_Positive_6" translatable="false">Ok</string>
     <string name="dialog_error_Title_5">Invalid Session</string>
-    <string name="dialog_error_Message_5">Your Session token was inválid, log in again,</string>
+    <string name="dialog_error_Message_5">Your Session token was invalid,or logged in on another device, log in again,</string>
     <string name="dialog_error_Positive_5" translatable="false">Ok</string>
     <string name="fragment_home_text_1">"We are a Branding + Digital studio that works, in close proximity to partners, companies and consumers, brands that communicate stories with soul and in personalized printed and digital experiences. "</string>
     <string name="fragment_home_text_2">It is formed by a passionate and attentive team, adjustable to the objectives and budget of each project, working in different business sectors and demographic contexts.</string>
-    <string name="title_activity_fragment_contacts1">Map</string>
-    <string name="title_activity_fragment_contacts_1">Map</string>
+    <string name="settings_account_title">Account</string>
+    <string name="settings_account_changepersonaldata">Change Personal Data</string>
+    <string name="settings_account_changePassword">Change Password</string>
+    <string name="settings_account_logout">Log Out</string>
+    <string name="settings_account_deactivate">Deactivate Account</string>
+    <string name="settings_application_title">Application</string>
+    <string name="settings_application_theme">Theme</string>
+    <string name="settings_legal_title">Legal Information</string>
+    <string name="settings_legal_OpenSourceLicenses">Open Souce Licenses</string>
+    <string name="settings_legal_closedsource">Closed Source Licenses</string>
+    <string name="settings_legal_privacy">Privacy statement</string>
+    <string name="dialog_error_Title_13">LogOut Failed</string>
+    <string name="dialog_error_Message_13">Error loggin you out, try again,</string>
+    <string name="dialog_error_Positive_13" translatable="false">Ok</string>
+    <string name="dialog_logout_title">Are you sure?</string>
+    <string name="dialog_logout_message">Are you sure you want to logout?</string>
+    <string name="dialog_logout_positive">Yes</string>
+    <string name="dialog_logout_negative">No</string>
+    <string name="gallery_project1_title" translatable="false">C.M Do Barreiro</string>
+    <string name="gallery_project1_Message">Creation of brand and corporate identity, creative concept and graphic image of campaign, graphic design of communication pieces and merchandising to support campaigns, creation of online presence of the event</string>
+    <string name="gallery_moreinfo">More Info +</string>
+    <string name="gallery_project2_title" translatable="false">Grupo Medinfar</string>
+    <string name="gallery_project2_message">UX Design and implementation of E-detailings for medical information delegates</string>
+    <string name="gallery_project3_title" translatable="false">Herdade Dos Outeiros Altos</string>
+    <string name="gallery_project3_message">Brand creation, institutional communication, wine label design and online brand presence.</string>
+    <string name="gallery_project4_title" translatable="false">Progenie Engineering</string>
+    <string name="gallery_project4_message">Brand redesign, creation of institutional communication and online brand presence.</string>
+    <string name="gallery_project5_title" translatable="false">Grupo Medinfar</string>
+    <string name="gallery_project5_message">Brand creation and label design</string>
+    <string name="logout_title">Log Out</string>
+    <string name="logout_message">Logging you out, please wait...</string>
 </resources>

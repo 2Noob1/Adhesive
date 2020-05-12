@@ -14,12 +14,12 @@ import android.os.AsyncTask;
 
 public class NetworkManager {
 
-    public boolean CheckForInternetAccess(Context context){
+    public boolean CheckForInternetAccess(Context context){ //this bullshit doesnt acctually checks for internet, it only checks if u have data on or if ur connected to a fucking weifi
         ConnectivityManager cm = (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
     }
-
+    //None of the bullshit bellow is getting used lmoa
     public boolean GetResource(String... strings){
         return true;
     }

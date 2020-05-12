@@ -11,10 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.renderscript.ScriptGroup;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -23,14 +20,12 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.CollationElementIterator;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
@@ -104,9 +99,9 @@ public class Register extends AppCompatActivity {
             };
 
 
-            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Za-z]{2,4}$";
+            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Za-z]{2,4}$"; //this is fucking useless
             Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-            Matcher matcher = pattern.matcher(fields[1].getText().toString());
+            Matcher matcher = pattern.matcher(fields[1].getText().toString());//this doesnt return nothing else than true so its pretty fucking useless
 
             request.execute("https://turma12i.com/JoaoFabio/FCT/RegisterAndroid.php","POST",fields[0].getText().toString(),fields[1].getText().toString(),fields[2].getText().toString(),fields[3].getText().toString(),Sex);
 
@@ -180,7 +175,7 @@ public class Register extends AppCompatActivity {
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            tv.setText(year + "-" + (month + 1) + "-" + day);
+//Again too lazy to search a better way to get date from a claendar freagment tha this fucking bullshit
         }
     }
 
@@ -211,6 +206,7 @@ public class Register extends AppCompatActivity {
                 Connection.setReadTimeout(1200);
 
                 //Headers
+                //There must a a more secure way to send data tha this peace of crap
                 Connection.setRequestProperty("Name",strings[2]);
                 Connection.setRequestProperty("Email",strings[3]);
                 Connection.setRequestProperty("Password",strings[4]);
@@ -243,11 +239,12 @@ public class Register extends AppCompatActivity {
 
             Log.d("RegisterDEBUG",result);
             try{
+                //again there is defenitly a way to get better json to stringMap
                 final JSONObject json = new JSONObject(result);
-                Iterator iterator = json.keys();
-                ArrayList stringMap = new ArrayList();
+                Iterator<String> iterator = json.keys();
+                ArrayList<String> stringMap = new ArrayList<>();
                 while(iterator.hasNext()){
-                    String key = (String)iterator.next();
+                    String key = iterator.next();
                     JSONObject Object = json.getJSONObject(key);
                     //  get id from  issue
                     stringMap.add(Object.optString("Email"));
@@ -267,6 +264,7 @@ public class Register extends AppCompatActivity {
                     return result;
                 }
 
+                //there are so many secure ways to do this inseted o securing a encripted key
                 String filename = "session";
                 String fileContents = "AuthKey:" + stringMap.get(4).toString() + "\nEmail:" + stringMap.get(0).toString();
                 try (FileOutputStream fos = openFileOutput(filename, MODE_PRIVATE)) {

@@ -27,7 +27,7 @@ public class fragment_home extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {//fabio did this so ...
         super.onViewCreated(view, savedInstanceState);
 
         imageSliderModelList = new ArrayList<>();
