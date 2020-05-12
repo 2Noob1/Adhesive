@@ -79,4 +79,14 @@
     <string name="gallery_project5_message">Brand creation and label design</string>
     <string name="logout_title">Log Out</string>
     <string name="logout_message">Logging you out, please wait...</string>
+    <string name="gallery_client">Client:</string>
+    <string name="gallery_project">Project:</string>
+    <string name="gallery_Services">Services:</string>
+    <string name="gallery_project1_services">Brand Design &amp; Strategy, Print Design, Interactive Design &amp; Social Media</string>
+    <string name="gallery_project2_services">UX Design, Mobile Application Implementation</string>
+    <string name="gallery_project3_services">Brand Design, Print Design, Package Design, UX Design, Desktop + Mobile Implementation, Content Management System, Social Media</string>
+    <string name="gallery_project4_services">Brand Design, Print Design, UX Design, Desktop + Mobile Implementation, SEO Consulting, Content Management System, Social Media</string>
+    <string name="gallery_project5_services">Brand Design &amp; Package Design</string>
+    <string name="gallery_projectDetails">Project details</string>
+    <string name="gallery_projectGallery">Gallery</string>
 </resources>
