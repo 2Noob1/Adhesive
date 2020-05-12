@@ -69,6 +69,7 @@ public class Launcher extends AppCompatActivity {
             Log.d("ss","ss1");
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
+            finishAfterTransition();
         }else{
             File dir = getFilesDir();
             File file = new File(dir, "session");
@@ -78,6 +79,7 @@ public class Launcher extends AppCompatActivity {
             newActivity.putExtra("NeedsError",true);
             newActivity.putExtra("ErrorCode",5);
             startActivity(newActivity);
+            finishAfterTransition();
         }
     }
 
