@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Detalhes do projeto"
+                android:text="@string/gallery_projectDetails"
                 android:fontFamily="sans-serif-black"
                 android:textSize="35sp"
                 android:layout_gravity="center"
@@ -35,10 +35,11 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif"
-                android:text="Client:"
+                android:text="@string/gallery_client"
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/clientText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -55,14 +56,16 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif"
-                android:text="Projeto:"
+                android:text="@string/gallery_project"
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/projectText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
                 android:fontFamily="sans-serif"
                 android:text="Criação de marca e identidade corporativa, conceito criativo e imagem gráfica de campanha, design gráfico de peças de comunicação e merchandising de suporte às campanhas, criação de presença online do evento"
                 android:textSize="14sp"
@@ -74,14 +77,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
                 android:fontFamily="sans-serif"
-                android:text="SERVIÇOS:"
+                android:text="@string/gallery_Services"
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/servicesText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif"
                 android:text="Brand Design &amp; Strategy, Print Design, Interactive Design &amp; Social Media"
@@ -91,7 +97,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Galeria"
+                android:text="@string/gallery_projectGallery"
                 android:fontFamily="sans-serif-black"
                 android:textSize="35sp"
                 android:layout_gravity="center"
