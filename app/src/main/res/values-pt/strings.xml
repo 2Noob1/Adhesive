@@ -77,4 +77,6 @@
     <string name="gallery_project3_message">Criação de marca, comunicação institucional, design de rótulos de vinho e presença online da marca.</string>
     <string name="gallery_project4_message">Redesign de marca, criação da comunicação institucional e presença online da marca.</string>
     <string name="gallery_project5_message">Criação de marca e design de rótulos</string>
+    <string name="logout_title">Terminar Sessão</string>
+    <string name="logout_message">A termiar a sua sessão, agurde...</string>
 </resources>

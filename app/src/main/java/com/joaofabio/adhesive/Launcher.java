@@ -171,7 +171,7 @@ public class Launcher extends AppCompatActivity {
 
     protected ArrayList<String> getFileKeys(String FileName){
         ArrayList<String> list = new ArrayList<String>();
-        File file = new File(getFilesDir().toString() + FileName);
+        File file = new File(getFilesDir().toString() + "session");
         int LineCounter = 0;
         FileInputStream fis = null;
         try {
