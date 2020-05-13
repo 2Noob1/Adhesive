@@ -1,14 +1,18 @@
 package com.joaofabio.adhesive;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -33,15 +37,72 @@ public class Launcher extends AppCompatActivity {
         setContentView(R.layout.activity_launcher);
 
         // ola //
-        Handler hnd = new Handler();
-        hnd.postDelayed(new Runnable() {
+        Handler hn = new Handler();
+        hn.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (checkNet()){
-                    checkLogin();
-                }
+                ok();
             }
         },1000);
+
+    }
+
+    public void ok(){
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    1);
+        }else{
+            Handler hnd = new Handler();
+            hnd.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (checkNet()){
+                        checkLogin();
+                    }
+                }
+            },1000);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    Handler hnd = new Handler();
+                    hnd.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (checkNet()){
+                                checkLogin();
+                            }
+                        }
+                    },1000);
+                } else {
+
+                    Handler hnd = new Handler();
+                    hnd.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (checkNet()){
+                                checkLogin();
+                            }
+                        }
+                    },1000);
+                    Toast.makeText(this, "Permission denied to read your External storage", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
     }
 
     protected void checkLogin(){

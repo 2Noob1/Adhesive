@@ -104,4 +104,5 @@
     <string name="dialog_error_Message_19">Messagem enviada com sucesso</string>
     <string name="sendmessage_loadinTittle">a enviar messagem</string>
     <string name="sendmessage_loadinMessage">a enviar messagem, tente novamente</string>
+    <string name="permission_call_error">Permissão de realizar chamadas não defenidas</string>
 </resources>

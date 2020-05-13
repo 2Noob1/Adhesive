@@ -161,36 +161,94 @@
                         android:textSize="30sp">
                     </TextView>
 
-                    <TextView
+                    <LinearLayout
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="sans-serif-black"
-                        android:text="+351215986542" />
+                        android:layout_height="match_parent">
+                        <TextView
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="sans-serif-black"
-                        android:text="+351961387146" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="+351215986542"
+                            android:gravity="center"/>
+                        <Button
+                            android:id="@+id/call1"
+                            android:layout_marginStart="10dp"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/loginpannel_buttons"
+                            android:text="Ligar"
+                            android:textColor="@color/colorPrimary"
+                            tools:ignore="RtlHardcoded" />
+                    </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:fontFamily="sans-serif-black"
-                        android:text="+351964325651" />
+                        android:layout_height="match_parent">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="+351961387146"
+                            android:gravity="center"/>
+                        <Button
+                            android:id="@+id/call2"
+                            android:layout_marginStart="10dp"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/loginpannel_buttons"
+                            android:text="Ligar"
+                            android:textColor="@color/colorPrimary"
+                            tools:ignore="RtlHardcoded" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="+351964325651"
+                            android:gravity="center"/>
+                        <Button
+                            android:id="@+id/call3"
+                            android:layout_marginStart="10dp"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/loginpannel_buttons"
+                            android:text="Ligar"
+                            android:textColor="@color/colorPrimary"
+                            tools:ignore="RtlHardcoded" />
+                    </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

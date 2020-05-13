@@ -1,11 +1,15 @@
 package com.joaofabio.adhesive;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +17,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -34,6 +40,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 import java.nio.Buffer;
 import java.nio.charset.StandardCharsets;
@@ -41,7 +48,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class fragment_contacts extends Fragment implements OnMapReadyCallback {
-
+    int id;
     ProgressDialog dialogLoading;
     GoogleMap map;
     MapView mapFragment;
@@ -74,11 +81,77 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
                         getResources().getString(R.string.sendmessage_loadinMessage), true);
             }
         });
+
+
+        Button call1 = view.findViewById(R.id.call1);
+        call1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                id = 1;
+                if (ActivityCompat.checkSelfPermission(Objects.requireNonNull(getActivity()), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.CALL_PHONE},
+                            1);
+                }else{
+                    doCall();
+                }
+            }
+        });
+        Button call2 = view.findViewById(R.id.call2);
+        call2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                id = 2;
+                if (ActivityCompat.checkSelfPermission(Objects.requireNonNull(getActivity()), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.CALL_PHONE},
+                            1);
+                }else{
+                    doCall();
+                }
+            }
+        });
+        Button call3 = view.findViewById(R.id.call3);
+        call3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                id = 3;
+                if (ActivityCompat.checkSelfPermission(Objects.requireNonNull(getActivity()), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.CALL_PHONE},
+                            1);
+                }else{
+                    doCall();
+                }
+            }
+        });
+    }
+
+    public void doCall(){
+        String CallNumber;
+        Intent call = new Intent(Intent.ACTION_CALL);
+        switch(id){
+            case 1:
+                CallNumber = "tel:+351" + getResources().getString(R.string.call1);
+                Log.d("Call",CallNumber);
+                call.setData(Uri.parse("tel:"+CallNumber));
+                break;
+            case 2:
+                CallNumber = "tel:+351" + getResources().getString(R.string.call2);
+                Log.d("Call",CallNumber);
+                call.setData(Uri.parse("tel:"+CallNumber));
+                break;
+            case 3:
+                CallNumber = "tel:+351" + getResources().getString(R.string.call3);
+                Log.d("Call",CallNumber);
+                call.setData(Uri.parse("tel:"+CallNumber));
+                break;
+        }
+        startActivity(call);
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
         map = googleMap;
         LatLng Adhesive = new LatLng(38.63663505470294,-9.105647762351694);
         map.addMarker(new MarkerOptions().position(Adhesive).title("Adhesisve"));

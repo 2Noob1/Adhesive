@@ -104,4 +104,5 @@
     <string name="dialog_error_Message_19">Message Sent Successfully</string>
     <string name="sendmessage_loadinTittle">sending message</string>
     <string name="sendmessage_loadinMessage">sending message, please wait</string>
+    <string name="permission_call_error">Permission to make phone calls denyed</string>
 </resources>

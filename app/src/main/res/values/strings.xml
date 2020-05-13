@@ -132,4 +132,8 @@
     <string name="dialog_error_Positive_19" translatable="false">Ok</string>
     <string name="sendmessage_loadinTittle">sending message</string>
     <string name="sendmessage_loadinMessage">sending message, please wait</string>
+    <string name="permission_call_error">Permission to make phone calls denyed</string>
+    <string name="call1" translatable="false">927878000</string>
+    <string name="call2" translatable="false">927878000</string>
+    <string name="call3" translatable="false">927878000</string>
 </resources>
