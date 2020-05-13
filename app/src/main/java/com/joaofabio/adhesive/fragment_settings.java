@@ -42,6 +42,78 @@ public class fragment_settings extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //Legal Stuff
+        final Button osbutton = view.findViewById(R.id.osbutton);
+        osbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogManager Dm = new DialogManager();
+                Dm.Critical = false;
+                Dm.ErrorCode = 14;
+                Dm.listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                };
+                Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
+                Dm = null;
+            }
+        });
+
+
+        final Button closed = view.findViewById(R.id.closedsource);
+        closed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogManager Dm = new DialogManager();
+                Dm.Critical = false;
+                Dm.ErrorCode = 15;
+                Dm.listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                };
+                Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
+                Dm = null;
+            }
+        });
+
+        final Button userAgreement = view.findViewById(R.id.useterms);
+        userAgreement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogManager Dm = new DialogManager();
+                Dm.Critical = false;
+                Dm.ErrorCode = 17;
+                Dm.listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                };
+                Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
+                Dm = null;
+            }
+        });
+
+        final Button privacy = view.findViewById(R.id.privacy);
+        privacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogManager Dm = new DialogManager();
+                Dm.Critical = false;
+                Dm.ErrorCode = 16;
+                Dm.listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                };
+                Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
+                Dm = null;
+            }
+        });
+
+
+        //Logut
         final Button LogoutButton = view.findViewById(R.id.logout);
         LogoutButton.setOnClickListener(new View.OnClickListener() {
             @Override

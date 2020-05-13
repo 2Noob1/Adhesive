@@ -154,6 +154,18 @@
                 </TextView>
 
                 <Button
+                    android:id="@+id/useterms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/loginpannel_buttons"
+                    android:text="@string/settings_legal_userAgreement"
+                    android:textColor="@color/colorPrimary" />
+                <Button
+                    android:id="@+id/osbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -164,6 +176,7 @@
                     android:text="@string/settings_legal_OpenSourceLicenses"
                     android:textColor="@color/colorPrimary" />
                 <Button
+                    android:id="@+id/closedsource"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -174,6 +187,7 @@
                     android:text="@string/settings_legal_closedsource"
                     android:textColor="@color/colorPrimary" />
                 <Button
+                    android:id="@+id/privacy"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"

@@ -98,11 +98,42 @@ public class DialogManager extends DialogFragment {
                 Message = getResources().getString(R.string.dialog_error_Message_13);
                 Positive = getResources().getString(R.string.dialog_error_Positive_13);
                 break;
+            case 14:
+                Title = getResources().getString(R.string.OpenSourceLicensesTitle);
+                Message = getResources().getString(R.string.OpenSourceLicensesMessage);
+                Positive = getResources().getString(R.string.OpenSourceLicensesPositive);
+                break;
+            case 15:
+                Title = getResources().getString(R.string.ClosedSourceLicensesTitle);
+                Message = getResources().getString(R.string.ClosedSourceLicensesMessage);
+                Positive = getResources().getString(R.string.ClosedSourceLicensePositive);
+                break;
+            case 16:
+                Title = getResources().getString(R.string.PrivacyStatementTitle);
+                Message = getResources().getString(R.string.PrivacyStatementMessage);
+                Positive = getResources().getString(R.string.PrivacyStatementPositive);
+                break;
+            case 17:
+                Title = getResources().getString(R.string.UserAgreementTitle);
+                Message = getResources().getString(R.string.UserAgreementMessage);
+                Positive = getResources().getString(R.string.UserAgreementPositive);
+                break;
+            case 18:
+                Title = getResources().getString(R.string.dialog_error_Title_18);
+                Message = getResources().getString(R.string.dialog_error_Message_18);
+                Positive = getResources().getString(R.string.dialog_error_Positive_18);
+                break;
+            case 19:
+                Title = getResources().getString(R.string.dialog_error_Title_19);
+                Message = getResources().getString(R.string.dialog_error_Message_19);
+                Positive = getResources().getString(R.string.dialog_error_Positive_19);
+                break;
         }
 
         if (targetActivity == null){
             targetActivity  = getActivity();
         }
+        assert targetActivity != null;
         AlertDialog.Builder builder = new AlertDialog.Builder(targetActivity);
         builder.setTitle(Title)
                 .setMessage(Message)
