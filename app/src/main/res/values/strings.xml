@@ -6,8 +6,7 @@
     <string name="loginmenu_registerbutton">Register Here ></string>
     <string name="loginmenu_loginbutton_desc">Already have an account?</string>
     <string name="loginmenu_registerbutton_desc">Don\'t have an account?</string>
-    <string name="login_Title">Login</string>
-    <string name="login_Desc">Login using your credentials below</string>
+    <string name="login_Title">Login</string>    <string name="login_Desc">Login using your credentials below</string>
     <string name="login_emailHint" translatable="false">Email</string>
     <string name="login_passwordHint" translatable="false">Password</string>
     <string name="login_problems">Having problems loging in?</string>
@@ -160,4 +159,16 @@
     <string name="dialog_error_Positive_26" translatable="false">Ok</string>
     <string name="dialog_deactivatingtitle">Deactivating Account</string>
     <string name="dialog_deactivatingmessage">Deactivating Account, please wait</string>
+    <string name="contacts_cardview">Speak with him:</string>
+    <string name="contacts_name1">" Subject Matter:"</string>
+    <string name="contacts_name2">Message:</string>
+    <string name="contacts_EditText">Text</string>
+    <string name="contacts_button_Send">Send</string>
+    <string name="contacts_title">Contacts:</string>
+    <string name="Contacts_Call">Call</string>
+    <string name="contacts_CardView2">Adress:</string>
+    <string name="Settings_NewPassword">Insert New Password</string>
+    <string name="Settings_NewEmail">Insert New Email</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Accept_ok" translatable="false">OK</string>
 </resources>

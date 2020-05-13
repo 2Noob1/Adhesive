@@ -123,4 +123,15 @@
     <string name="dialog_error_Message_26">Error deactivating Account, try again later</string>
     <string name="dialog_deactivatingtitle">Deactivating Account</string>
     <string name="dialog_deactivatingmessage">Deactivating Account, please wait</string>
+    <string name="contacts_cardview">Speak with him::</string>
+    <string name="contacts_EditText">Text</string>
+    <string name="contacts_button_Send">Send</string>
+    <string name="contacts_title">Contacts:</string>
+    <string name="Contacts_Call">Call</string>
+    <string name="contacts_CardView2">Adress:</string>
+    <string name="contacts_name2">Message:</string>
+    <string name="contacts_name1">" Subject Matter:"</string>
+    <string name="Settings_NewPassword">Insert New Password</string>
+    <string name="Settings_NewEmail">Insert New Email</string>
+    <string name="Cancel">Cancel</string>
 </resources>

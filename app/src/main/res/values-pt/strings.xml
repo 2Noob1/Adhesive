@@ -121,6 +121,17 @@
     <string name="dialog_error_Message_25">Conta desativada com sucesso, para reativar registe-se novamente</string>
     <string name="dialog_error_Title_26">Erro a desativar conta</string>
     <string name="dialog_error_Message_26">Erro ao desativar conta, tente novamente mais tarde</string>
-    <string name="dialog_deactivatingtitle">A Desatibar Conta</string>
-    <string name="dialog_deactivatingmessage">A desativar conta, por favir aguarde</string>
+    <string name="dialog_deactivatingtitle">A Desativar Conta</string>
+    <string name="dialog_deactivatingmessage">A desativar conta, por favor aguarde</string>
+    <string name="contacts_cardview">Fale Connosco:</string>
+    <string name="contacts_EditText">Texto</string>
+    <string name="contacts_button_Send">Enviar</string>
+    <string name="contacts_title">Contactos:</string>
+    <string name="Contacts_Call">Ligar</string>
+    <string name="contacts_CardView2">Morada:</string>
+    <string name="contacts_name2">Mensagem:</string>
+    <string name="contacts_name1">Assunto:</string>
+    <string name="Settings_NewPassword">Insira uma nova password</string>
+    <string name="Settings_NewEmail">Insira um novo email</string>
+    <string name="Cancel">Cancelar</string>
 </resources>

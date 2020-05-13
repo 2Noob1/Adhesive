@@ -4,16 +4,16 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="@color/colorPrimary"
-        android:text="@string/main_menu_gallery"
-        android:textSize="50sp"
-        android:gravity="center"
-        android:textColor="@android:color/white"
         android:fontFamily="sans-serif-black"
-        />
+        android:gravity="center"
+        android:text="@string/main_menu_contacts"
+        android:textColor="@android:color/white"
+        android:textSize="50sp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:text="Fale Connosco:"
+                        android:text="@string/contacts_cardview"
                         android:gravity="center"
                         android:background="@color/colorPrimary"
                         android:textColor="@android:color/white"
@@ -58,7 +58,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Assunto:" />
+                        android:text="@string/contacts_name1" />
 
                     <EditText
                         android:id="@+id/assunto"
@@ -69,7 +69,7 @@
                         android:backgroundTint="@color/colorPrimary"
                         android:drawableTint="#FFFFFF"
                         android:ems="13"
-                        android:hint="Texto"
+                        android:hint="@string/contacts_EditText"
                         android:inputType="textPersonName"
                         android:textColor="@color/colorPrimary"
                         android:textColorHint="@color/colorPrimary"
@@ -89,7 +89,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Mensagem:" />
+                        android:text="@string/contacts_name2" />
 
 
 
@@ -105,7 +105,7 @@
                     android:backgroundTint="@color/colorPrimary"
                     android:drawableTint="#FFFFFF"
                     android:ems="13"
-                    android:hint="Texto"
+                    android:hint="@string/contacts_EditText"
                     android:inputType="textMultiLine"
                     android:textColor="@color/colorPrimary"
                     android:textColorHint="@color/colorPrimary"
@@ -130,7 +130,7 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
-                        android:text="Enviar"
+                        android:text="@string/contacts_button_Send"
                         android:textColor="@color/colorPrimary"
                         tools:ignore="RtlHardcoded" />
 
@@ -153,7 +153,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:text="Contactos:"
+                        android:text="@string/contacts_title"
                         android:gravity="center"
                         android:background="@color/colorPrimary"
                         android:textColor="@android:color/white"
@@ -185,7 +185,7 @@
                             android:layout_marginEnd="10dp"
                             android:layout_marginBottom="10dp"
                             android:background="@drawable/loginpannel_buttons"
-                            android:text="Ligar"
+                            android:text="@string/Contacts_Call"
                             android:textColor="@color/colorPrimary"
                             tools:ignore="RtlHardcoded" />
                     </LinearLayout>
@@ -215,7 +215,7 @@
                             android:layout_marginEnd="10dp"
                             android:layout_marginBottom="10dp"
                             android:background="@drawable/loginpannel_buttons"
-                            android:text="Ligar"
+                            android:text="@string/Contacts_Call"
                             android:textColor="@color/colorPrimary"
                             tools:ignore="RtlHardcoded" />
                     </LinearLayout>
@@ -245,7 +245,7 @@
                             android:layout_marginEnd="10dp"
                             android:layout_marginBottom="10dp"
                             android:background="@drawable/loginpannel_buttons"
-                            android:text="Ligar"
+                            android:text="@string/Contacts_Call"
                             android:textColor="@color/colorPrimary"
                             tools:ignore="RtlHardcoded" />
                     </LinearLayout>
@@ -269,7 +269,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:text="Morada:"
+                        android:text="@string/contacts_CardView2"
                         android:gravity="center"
                         android:background="@color/colorPrimary"
                         android:textColor="@android:color/white"
