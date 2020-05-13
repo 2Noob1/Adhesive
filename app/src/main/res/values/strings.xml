@@ -71,7 +71,7 @@
     <string name="fragment_home_text_1">"We are a Branding + Digital studio that works, in close proximity to partners, companies and consumers, brands that communicate stories with soul and in personalized printed and digital experiences. "</string>
     <string name="fragment_home_text_2">It is formed by a passionate and attentive team, adjustable to the objectives and budget of each project, working in different business sectors and demographic contexts.</string>
     <string name="settings_account_title">Account</string>
-    <string name="settings_account_changepersonaldata">Change Personal Data</string>
+    <string name="settings_account_changepersonaldata">Change Email</string>
     <string name="settings_account_changePassword">Change Password</string>
     <string name="settings_account_logout">Log Out</string>
     <string name="settings_account_deactivate">Deactivate Account</string>
@@ -136,4 +136,28 @@
     <string name="call1" translatable="false">927878000</string>
     <string name="call2" translatable="false">927878000</string>
     <string name="call3" translatable="false">927878000</string>
+    <string name="dialog_error_Title_21">Error changing Password</string>
+    <string name="dialog_error_Message_21">Error Changing Password, try again</string>
+    <string name="dialog_error_Positive_21" translatable="false">Ok</string>
+    <string name="dialog_error_Title_22">Password Changed Successfully</string>
+    <string name="dialog_error_Message_22">Password Changed Successfully</string>
+    <string name="dialog_error_Positive_22" translatable="false">Ok</string>
+    <string name="changepassword_dialog">Change Password</string>
+    <string name="changepassword_dialog_Message">Changing your password, please wait</string>
+    <string name="dialog_error_Title_23">Email Changed</string>
+    <string name="dialog_error_Message_23">Email Changed Successfully</string>
+    <string name="dialog_error_Positive_23" translatable="false">Ok</string>
+    <string name="dialog_error_Title_24">Error changing Email</string>
+    <string name="dialog_error_Positive_24" translatable="false">Ok</string>
+    <string name="dialog_error_Message_24">Error changing your email try again later</string>
+    <string name="dialog_Email">Change Email</string>
+    <string name="dialog_Email_Message">Changing your email, please wait</string>
+    <string name="dialog_error_Title_25">Account Deactivated</string>
+    <string name="dialog_error_Message_25">Account Deactivated Successfully, to reactivate the account you will need to register again</string>
+    <string name="dialog_error_Positive_25" translatable="false">Ok</string>
+    <string name="dialog_error_Title_26">Error Deactivating Account</string>
+    <string name="dialog_error_Message_26">Error deactivating Account, try again later</string>
+    <string name="dialog_error_Positive_26" translatable="false">Ok</string>
+    <string name="dialog_deactivatingtitle">Deactivating Account</string>
+    <string name="dialog_deactivatingmessage">Deactivating Account, please wait</string>
 </resources>

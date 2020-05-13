@@ -175,7 +175,8 @@ public class Register extends AppCompatActivity {
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
-//Again too lazy to search a better way to get date from a claendar freagment tha this fucking bullshit
+            //Again too lazy to search a better way to get date from a claendar freagment tha this fucking bullshit
+            tv.setText(year + "-" + (month + 1) + "-" + day);
         }
     }
 
@@ -202,8 +203,8 @@ public class Register extends AppCompatActivity {
                 //Method
                 Connection.setRequestMethod(strings[1]);
                 //Timeouts
-                Connection.setConnectTimeout(1200);
-                Connection.setReadTimeout(1200);
+                Connection.setConnectTimeout(5000);
+                Connection.setReadTimeout(5000);
 
                 //Headers
                 //There must a a more secure way to send data tha this peace of crap

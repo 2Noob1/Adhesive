@@ -128,6 +128,36 @@ public class DialogManager extends DialogFragment {
                 Message = getResources().getString(R.string.dialog_error_Message_19);
                 Positive = getResources().getString(R.string.dialog_error_Positive_19);
                 break;
+            case 21:
+                Title = getResources().getString(R.string.dialog_error_Title_21);
+                Message = getResources().getString(R.string.dialog_error_Message_21);
+                Positive = getResources().getString(R.string.dialog_error_Positive_21);
+                break;
+            case 22:
+                Title = getResources().getString(R.string.dialog_error_Title_22);
+                Message = getResources().getString(R.string.dialog_error_Message_22);
+                Positive = getResources().getString(R.string.dialog_error_Positive_22);
+                break;
+            case 23:
+                Title = getResources().getString(R.string.dialog_error_Title_23);
+                Message = getResources().getString(R.string.dialog_error_Message_23);
+                Positive = getResources().getString(R.string.dialog_error_Positive_23);
+                break;
+            case 24:
+                Title = getResources().getString(R.string.dialog_error_Title_24);
+                Message = getResources().getString(R.string.dialog_error_Message_24);
+                Positive = getResources().getString(R.string.dialog_error_Positive_24);
+                break;
+            case 25:
+                Title = getResources().getString(R.string.dialog_error_Title_25);
+                Message = getResources().getString(R.string.dialog_error_Message_25);
+                Positive = getResources().getString(R.string.dialog_error_Positive_25);
+                break;
+            case 26:
+                Title = getResources().getString(R.string.dialog_error_Title_26);
+                Message = getResources().getString(R.string.dialog_error_Message_26);
+                Positive = getResources().getString(R.string.dialog_error_Positive_26);
+                break;
         }
 
         if (targetActivity == null){

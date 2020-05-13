@@ -55,7 +55,7 @@
     <string name="fragment_home_text_1">Somos um estúdio de Branding + Digital que trabalha, em proximidade com parceiros, empresas e consumidores, marcas que comunicam histórias com alma e em experiências impressas e digitais personalizadas.</string>
     <string name="fragment_home_text_2">É formado por uma equipe apaixonada e atenta ao detalhe, ajustável aos objetivos e ao orçamento de cada projeto, que trabalha diferentes setores de negócios e contextos demográficos.</string>
     <string name="settings_account_title">Conta</string>
-    <string name="settings_account_changepersonaldata">Aletar dados pessoais</string>
+    <string name="settings_account_changepersonaldata">Alterar Email</string>
     <string name="settings_account_changePassword">Alterar Password</string>
     <string name="settings_account_logout">Terminar Sessão</string>
     <string name="settings_account_deactivate">Desativar Conta</string>
@@ -105,4 +105,22 @@
     <string name="sendmessage_loadinTittle">a enviar messagem</string>
     <string name="sendmessage_loadinMessage">a enviar messagem, tente novamente</string>
     <string name="permission_call_error">Permissão de realizar chamadas não defenidas</string>
+    <string name="dialog_error_Title_21">Erro a alterar password</string>
+    <string name="dialog_error_Message_21">Ocurreu um erro ao alterar a sua password, tente novamente</string>
+    <string name="dialog_error_Title_22">Password Alterada com sucesso</string>
+    <string name="dialog_error_Message_22">Password Alterada com sucesso</string>
+    <string name="changepassword_dialog">Alterar Password</string>
+    <string name="changepassword_dialog_Message">A alterar password, tente novamente</string>
+    <string name="dialog_error_Title_23">Email Alterado</string>
+    <string name="dialog_error_Message_23">Email alterado com sucesso</string>
+    <string name="dialog_error_Title_24">Erro ao alterar email</string>
+    <string name="dialog_error_Message_24">Erro ao alterar email, tente novamente</string>
+    <string name="dialog_Email">Alterar Email</string>
+    <string name="dialog_Email_Message">A Alterar o seu email agurarde</string>
+    <string name="dialog_error_Title_25">Conta Desativada</string>
+    <string name="dialog_error_Message_25">Conta desativada com sucesso, para reativar registe-se novamente</string>
+    <string name="dialog_error_Title_26">Erro a desativar conta</string>
+    <string name="dialog_error_Message_26">Erro ao desativar conta, tente novamente mais tarde</string>
+    <string name="dialog_deactivatingtitle">A Desatibar Conta</string>
+    <string name="dialog_deactivatingmessage">A desativar conta, por favir aguarde</string>
 </resources>

@@ -123,8 +123,8 @@ public class LoginAction extends AppCompatActivity {
                 Connection.setRequestMethod(strings[1]);
                 //Sets Timeouts
                 Connection.setDoOutput(false);
-                Connection.setConnectTimeout(1200);
-                Connection.setReadTimeout(1200);
+                Connection.setConnectTimeout(5000);
+                Connection.setReadTimeout(5000);
                 Connection.setRequestProperty("Email",strings[2]);
                 Connection.setRequestProperty("Password",strings[3]);
                 Log.d("Request",Connection.getRequestProperties().toString());
@@ -196,6 +196,9 @@ public class LoginAction extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             Log.d("Lol",s);
+            if ((error) && ErrorCode == 0){
+                ErrorCode = 3;
+            }
             if (error){
                 Log.d("Error",s);
                 errorLogin(ErrorCode);
