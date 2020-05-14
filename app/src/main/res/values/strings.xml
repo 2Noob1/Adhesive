@@ -159,7 +159,7 @@
     <string name="dialog_error_Positive_26" translatable="false">Ok</string>
     <string name="dialog_deactivatingtitle">Deactivating Account</string>
     <string name="dialog_deactivatingmessage">Deactivating Account, please wait</string>
-    <string name="contacts_cardview">Speak with him:</string>
+    <string name="contacts_cardview">" Talk to us:"</string>
     <string name="contacts_name1">" Subject Matter:"</string>
     <string name="contacts_name2">Message:</string>
     <string name="contacts_EditText">Text</string>
