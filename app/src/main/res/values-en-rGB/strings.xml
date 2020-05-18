@@ -134,4 +134,8 @@
     <string name="Settings_NewPassword">Insert New Password</string>
     <string name="Settings_NewEmail">Insert New Email</string>
     <string name="Cancel">Cancel</string>
+    <string name="deactivte_title">Deactivate Account?</string>
+    <string name="deativate_message">Please Confirm this action</string>
+    <string name="deactivate_positive">Yes</string>
+    <string name="deactivate_negatove">No</string>
 </resources>

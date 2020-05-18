@@ -4,21 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Launcher"
-    android:background="@drawable/launcher_background">
+    android:background="#F5F5F5">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:src="@drawable/launcher_logo"
-        android:tint="@android:color/white"
+        android:tint="@color/secoundaryColor"
         android:layout_centerInParent="true"
         android:contentDescription="@string/app_name" />
 
     <ProgressBar
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:indeterminateTint="@android:color/white"
+        android:indeterminateTint="#A8A7A6"
         android:layout_centerInParent="true"
         android:layout_below="@+id/logo"/>
 

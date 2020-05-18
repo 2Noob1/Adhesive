@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="@drawable/main_background">
+    android:background="#F5F5F5">
 
     <FrameLayout
         android:id="@+id/FragmentView"
@@ -24,10 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/secoundaryColor"
+        android:background="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_main" />
+        app:menu="@menu/menu_main"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

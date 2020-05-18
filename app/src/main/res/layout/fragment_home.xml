@@ -6,15 +6,17 @@
     >
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         app:srcCompat="@drawable/launcher_logo"
         android:contentDescription="@string/app_name"
         android:layout_gravity="center_horizontal"
-        android:tint="@android:color/white"/>
+        android:tint="@android:color/white"
+        android:background="@color/secoundaryColor"
+        android:scaleType="center"/>
 
     <ScrollView
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -29,7 +31,9 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        app:cardCornerRadius="15dp">
+        app:cardCornerRadius="15dp"
+        android:outlineAmbientShadowColor="@android:color/darker_gray"
+        android:outlineSpotShadowColor="@android:color/darker_gray">
 
         <com.smarteist.autoimageslider.SliderView
             android:id="@+id/imageSlider"
@@ -52,7 +56,6 @@
             app:sliderStartAutoCycle="true" />
 
     </androidx.cardview.widget.CardView>
-
 
     <TextView
         android:id="@+id/textView12"

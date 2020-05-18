@@ -6,8 +6,8 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="100dp"
+        android:background="@color/secoundaryColor"
         android:text="@string/main_menu_settings"
         android:textSize="50sp"
         android:gravity="center"
@@ -18,7 +18,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp">
+        android:layout_marginTop="100dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                 android:layout_height="80dp"
                 android:text="@string/settings_account_title"
                 android:gravity="center"
-                android:background="@color/colorPrimary"
+                android:background="@color/secoundaryColor"
                 android:textColor="@android:color/white"
                 android:fontFamily="sans-serif-black"
                 android:textSize="30sp">
@@ -114,7 +114,7 @@
                     android:layout_height="80dp"
                     android:text="@string/settings_legal_title"
                     android:gravity="center"
-                    android:background="@color/colorPrimary"
+                    android:background="@color/secoundaryColor"
                     android:textColor="@android:color/white"
                     android:fontFamily="sans-serif-black"
                     android:textSize="30sp">

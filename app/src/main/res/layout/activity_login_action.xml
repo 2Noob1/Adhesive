@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="#F5F5F5"
     tools:context=".LoginAction">
 
     <Button
@@ -29,7 +29,6 @@
         android:layout_marginTop="28dp"
         android:text="@string/login_Desc"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,7 +42,6 @@
         android:layout_marginTop="36dp"
         android:text="@string/login_problems"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.067"
@@ -57,7 +55,6 @@
         android:layout_marginTop="36dp"
         android:text="@string/login_donthaveaccount"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.932"

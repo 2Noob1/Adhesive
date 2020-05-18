@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login"
-    android:background="@drawable/login_background">
+    android:background="#F5F5F5">
 
     <TextView
         android:id="@+id/textView2"
@@ -59,7 +59,6 @@
         android:layout_marginTop="32dp"
         android:text="@string/loginmenu_Desc"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -73,7 +72,6 @@
         android:layout_marginTop="28dp"
         android:text="@string/loginmenu_loginbutton_desc"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -87,7 +85,6 @@
         android:layout_marginTop="20dp"
         android:text="@string/loginmenu_registerbutton_desc"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

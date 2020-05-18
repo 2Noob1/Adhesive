@@ -66,10 +66,23 @@ public class fragment_settings extends Fragment {
         final Button deleteAccount = view.findViewById(R.id.deleteAccount); //removeAccount
         deleteAccount.setOnClickListener(new View.OnClickListener() {@Override
         public void onClick(View v) {
-            DeleteAccount req = new DeleteAccount();
-            ArrayList list = getFileKeys("session");
-            req.execute("https://turma12i.com/JoaoFabio/FCT/removeUser.php", "POST", list.get(0).toString(), list.get(1).toString());
-            dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.dialog_deactivatingtitle), getResources().getString(R.string.dialog_deactivatingmessage), true);
+            DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {@Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case DialogInterface.BUTTON_POSITIVE:
+                        DeleteAccount req = new DeleteAccount();
+                        ArrayList list = getFileKeys("session");
+                        req.execute("https://turma12i.com/JoaoFabio/FCT/removeUser.php", "POST", list.get(0).toString(), list.get(1).toString());
+                        dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.dialog_deactivatingtitle), getResources().getString(R.string.dialog_deactivatingmessage), true);
+                        break;
+
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        break;
+                }
+            }
+            };
+            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            builder.setTitle(getResources().getString(R.string.deactivte_title)).setMessage(getResources().getString(R.string.deativate_message)).setPositiveButton(getResources().getString(R.string.deactivate_positive), dialogClickListener).setNegativeButton(getResources().getString(R.string.deactivate_negatove), dialogClickListener).show();
         }
         });
 
