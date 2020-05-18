@@ -50,6 +50,7 @@ public class Register extends AppCompatActivity {
             }
         });
 
+        getWindow().setStatusBarColor(getResources().getColor(R.color.activity_Color));
         Button Register = findViewById(R.id.button6);
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,14 +99,7 @@ public class Register extends AppCompatActivity {
                     findViewById(R.id.editText7)//Data Nascimento
             };
 
-
-            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Za-z]{2,4}$"; //this is fucking useless
-            Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-            Matcher matcher = pattern.matcher(fields[1].getText().toString());//this doesnt return nothing else than true so its pretty fucking useless
-
             request.execute("https://turma12i.com/JoaoFabio/FCT/RegisterAndroid.php","POST",fields[0].getText().toString(),fields[1].getText().toString(),fields[2].getText().toString(),fields[3].getText().toString(),Sex);
-
-
          }
     }
 

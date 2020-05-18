@@ -37,6 +37,7 @@ public class LoginAction extends AppCompatActivity {
                 finishAfterTransition();
             }
         });
+        getWindow().setStatusBarColor(getResources().getColor(R.color.activity_Color));
 
         Button loginbtn = findViewById(R.id.button3);
         loginbtn.setOnClickListener(new View.OnClickListener() {

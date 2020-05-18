@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -31,6 +32,7 @@ import java.util.Iterator;
 
 public class Launcher extends AppCompatActivity {
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,7 @@ public class Launcher extends AppCompatActivity {
                 ok();
             }
         },1000);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.activity_Color));
 
     }
 

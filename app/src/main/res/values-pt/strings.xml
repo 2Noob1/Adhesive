@@ -62,8 +62,8 @@
     <string name="settings_application_title">Aplicação</string>
     <string name="settings_application_theme">Tema</string>
     <string name="settings_legal_title">Informações Jurídicas</string>
-    <string name="settings_legal_OpenSourceLicenses">Licensas de Código Aberto</string>
-    <string name="settings_legal_closedsource">Licensas de Código Fechado</string>
+    <string name="settings_legal_OpenSourceLicenses">Licenças de Código Aberto</string>
+    <string name="settings_legal_closedsource">Licenças de Código Fechado</string>
     <string name="settings_legal_privacy">Decalração de privacidade</string>
     <string name="dialog_error_Title_13">Falha ao termiar Sessão</string>
     <string name="dialog_error_Message_13">Não foi possível termiar sessão, tente novamente</string>

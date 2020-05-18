@@ -17,6 +17,7 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.activity_Color));
 
         Log.d("Here","Chegou");
         Bundle bundle = getIntent().getExtras();
