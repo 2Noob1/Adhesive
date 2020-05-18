@@ -132,17 +132,17 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
         Intent call = new Intent(Intent.ACTION_CALL);
         switch(id){
             case 1:
-                CallNumber = "tel:+351" + getResources().getString(R.string.call1);
+                CallNumber = "+351" + getResources().getString(R.string.call1);
                 Log.d("Call",CallNumber);
                 call.setData(Uri.parse("tel:"+CallNumber));
                 break;
             case 2:
-                CallNumber = "tel:+351" + getResources().getString(R.string.call2);
+                CallNumber = "+351" + getResources().getString(R.string.call2);
                 Log.d("Call",CallNumber);
                 call.setData(Uri.parse("tel:"+CallNumber));
                 break;
             case 3:
-                CallNumber = "tel:+351" + getResources().getString(R.string.call3);
+                CallNumber = "+351" + getResources().getString(R.string.call3);
                 Log.d("Call",CallNumber);
                 call.setData(Uri.parse("tel:"+CallNumber));
                 break;
