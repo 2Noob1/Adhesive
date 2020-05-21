@@ -1,7 +1,9 @@
 package com.joaofabio.adhesive;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.DialogFragment;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -29,6 +31,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Objects;
 
 public class Launcher extends AppCompatActivity {
 
@@ -291,4 +294,16 @@ public class Launcher extends AppCompatActivity {
         }
         return list;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        DialogFragment Df = (DialogFragment) Objects.requireNonNull(this).getSupportFragmentManager().findFragmentByTag("LegalDialog");
+        if (Df != null) Df.dismiss();
+
+        Df = (DialogFragment) Objects.requireNonNull(this).getSupportFragmentManager().findFragmentByTag("ErrorDialog");
+        if (Df != null) Df.dismiss();
+    }
+
 }

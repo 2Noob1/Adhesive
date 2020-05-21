@@ -1,6 +1,7 @@
 package com.joaofabio.adhesive;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import org.json.JSONObject;
 
@@ -21,6 +23,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Objects;
 
 public class LoginAction extends AppCompatActivity {
     ProgressDialog dialogLoading;
@@ -96,7 +99,6 @@ public class LoginAction extends AppCompatActivity {
                     }
                 };
                 dialog.show(getSupportFragmentManager(),"ErrorDialog");
-                dialogLoading.dismiss();
                 return false;
             }
         }
@@ -208,6 +210,17 @@ public class LoginAction extends AppCompatActivity {
                 finishAfterTransition();
             }
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        DialogFragment Df = (DialogFragment) Objects.requireNonNull(this).getSupportFragmentManager().findFragmentByTag("LegalDialog");
+        if (Df != null) Df.dismiss();
+
+        Df = (DialogFragment) Objects.requireNonNull(this).getSupportFragmentManager().findFragmentByTag("ErrorDialog");
+        if (Df != null) Df.dismiss();
     }
 
 

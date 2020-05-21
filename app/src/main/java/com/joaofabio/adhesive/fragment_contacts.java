@@ -18,6 +18,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -33,6 +34,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -40,10 +42,12 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class fragment_contacts extends Fragment implements OnMapReadyCallback {
+
     int id;
     ProgressDialog dialogLoading;
     GoogleMap map;
     MapView mapFragment;
+    private DialogManager Dm;
 
     @Nullable
     @Override
@@ -160,6 +164,8 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
     @Override
     public void onResume() {
         super.onResume();
+        DialogFragment Df = (DialogFragment) Objects.requireNonNull(getActivity()).getSupportFragmentManager().findFragmentByTag("ErrorDialog");
+        if (Df != null) Df.dismiss();
         mapFragment.onResume();
     }
 
@@ -261,22 +267,24 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
                 startActivity(newActivity);
             }else {
                 if (Error) {
-                    DialogManager Dm = new DialogManager();
+                    Dm = new DialogManager();
                     Dm.Critical = false;
                     Dm.ErrorCode = 18;
                     Dm.listener = new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
                         }
                     };
                     Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
                 } else {
-                    DialogManager Dm = new DialogManager();
+                    Dm = new DialogManager();
                     Dm.Critical = false;
                     Dm.ErrorCode = 19;
                     Dm.listener = new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
                         }
                     };
                     Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
@@ -286,7 +294,7 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
     }
 
 
-    protected ArrayList<String> getFileKeys(String FileName){
+    private ArrayList<String> getFileKeys(String FileName){
         ArrayList<String> list = new ArrayList<String>();
         File file = new File( getContext().getFilesDir().toString() + "session");
         int LineCounter = 0;
@@ -341,5 +349,12 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
             }
         }
         return list;
+    }
+
+
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
     }
 }

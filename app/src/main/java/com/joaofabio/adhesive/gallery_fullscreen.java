@@ -3,6 +3,8 @@ package com.joaofabio.adhesive;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,12 +27,18 @@ public class gallery_fullscreen extends AppCompatActivity {
         imageSliderModelList = new ArrayList<>();
         sliderView = findViewById(R.id.imageSlider2);
 
-
+        Button back = findViewById(R.id.button3);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         //bunlde
         Bundle bundle = getIntent().getExtras();
         assert bundle != null;
-        final Integer ProjectCode = bundle.getInt("ProductCode");
+        final int ProjectCode = bundle.getInt("ProductCode");
 
         //Ui Itens
         final ImageView projectImage = findViewById(R.id.gallery_projectimage);

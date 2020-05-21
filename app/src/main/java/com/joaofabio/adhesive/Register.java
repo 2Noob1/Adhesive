@@ -287,4 +287,17 @@ public class Register extends AppCompatActivity {
             }
         }
     }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        DialogFragment Df = (DialogFragment) Objects.requireNonNull(this).getSupportFragmentManager().findFragmentByTag("LegalDialog");
+        if (Df != null) Df.dismiss();
+
+        Df = (DialogFragment) Objects.requireNonNull(this).getSupportFragmentManager().findFragmentByTag("ErrorDialog");
+        if (Df != null) Df.dismiss();
+    }
+
 }

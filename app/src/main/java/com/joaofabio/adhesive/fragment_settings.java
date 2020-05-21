@@ -15,7 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.annotation. * ;
+import androidx.annotation.*;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import java.io.BufferedReader;
@@ -34,9 +35,9 @@ public class fragment_settings extends Fragment {
 
     private ProgressDialog dialogLoading = null;
 
-    @Nullable@Override
+    @Nullable @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (dialogLoading != null){
+        if (dialogLoading != null) {
             dialogLoading.dismiss();
             dialogLoading = null;
         }
@@ -48,158 +49,182 @@ public class fragment_settings extends Fragment {
 
         //Legal Stuff
         final Button osbutton = view.findViewById(R.id.osbutton); //OpenSource
-        osbutton.setOnClickListener(new View.OnClickListener() {@Override
-        public void onClick(View v) {
-            DialogManager Dm = new DialogManager();
-            Dm.Critical = false;
-            Dm.ErrorCode = 14;
-            Dm.listener = new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
+        osbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogManager Dm = new DialogManager();
+                Dm.Critical = false;
+                Dm.ErrorCode = 14;
+                Dm.listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                };
+                Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
+                Dm = null;
             }
-            };
-            Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
-            Dm = null;
-        }
         });
 
         final Button deleteAccount = view.findViewById(R.id.deleteAccount); //removeAccount
-        deleteAccount.setOnClickListener(new View.OnClickListener() {@Override
-        public void onClick(View v) {
-            DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case DialogInterface.BUTTON_POSITIVE:
-                        DeleteAccount req = new DeleteAccount();
-                        ArrayList list = getFileKeys("session");
-                        req.execute("https://turma12i.com/JoaoFabio/FCT/removeUser.php", "POST", list.get(0).toString(), list.get(1).toString());
-                        dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.dialog_deactivatingtitle), getResources().getString(R.string.dialog_deactivatingmessage), true);
-                        break;
+        deleteAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case DialogInterface.BUTTON_POSITIVE:
+                                DeleteAccount req = new DeleteAccount();
+                                ArrayList list = getFileKeys("session");
+                                req.execute("https://turma12i.com/JoaoFabio/FCT/removeUser.php", "POST", list.get(0).toString(), list.get(1).toString());
+                                dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.dialog_deactivatingtitle), getResources().getString(R.string.dialog_deactivatingmessage), true);
+                                break;
 
-                    case DialogInterface.BUTTON_NEGATIVE:
-                        break;
-                }
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                break;
+                        }
+                    }
+                };
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle(getResources().getString(R.string.deactivte_title)).setMessage(getResources().getString(R.string.deativate_message)).setPositiveButton(getResources().getString(R.string.deactivate_positive), dialogClickListener).setNegativeButton(getResources().getString(R.string.deactivate_negatove), dialogClickListener).show();
             }
-            };
-            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-            builder.setTitle(getResources().getString(R.string.deactivte_title)).setMessage(getResources().getString(R.string.deativate_message)).setPositiveButton(getResources().getString(R.string.deactivate_positive), dialogClickListener).setNegativeButton(getResources().getString(R.string.deactivate_negatove), dialogClickListener).show();
-        }
         });
 
         final Button changepassword = view.findViewById(R.id.chagepasswordbtn); //change Password
-        changepassword.setOnClickListener(new View.OnClickListener() {@Override
-        public void onClick(View v) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-            builder.setTitle(getResources().getString(R.string.Settings_NewPassword));
-            final EditText input = new EditText(getContext());
-            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-            builder.setView(input);
-            builder.setPositiveButton(getResources().getString(R.string.Accept_ok), new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {
-                ChangePassword Chng = new ChangePassword();
-                ArrayList list = getFileKeys("session");
-                Chng.execute("https://turma12i.com/JoaoFabio/FCT/ChangePassword.php", "POST", list.get(0).toString(), list.get(1).toString(), input.getText().toString());
-                dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.changepassword_dialog), getResources().getString(R.string.changepassword_dialog_Message), true);
+        changepassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle(getResources().getString(R.string.Settings_NewPassword));
+                final EditText input = new EditText(getContext());
+                input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                builder.setView(input);
+                builder.setPositiveButton(getResources().getString(R.string.Accept_ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ChangePassword Chng = new ChangePassword();
+                        ArrayList list = getFileKeys("session");
+                        Chng.execute("https://turma12i.com/JoaoFabio/FCT/ChangePassword.php", "POST", list.get(0).toString(), list.get(1).toString(), input.getText().toString());
+                        dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.changepassword_dialog), getResources().getString(R.string.changepassword_dialog_Message), true);
+                    }
+                });
+                builder.setNegativeButton(getResources().getString(R.string.Cancel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
             }
-            });
-            builder.setNegativeButton(getResources().getString(R.string.Cancel), new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-            });
-            builder.show();
-        }
         });
 
         final Button changeEmail = view.findViewById(R.id.changeemail); //changeEmail
-        changeEmail.setOnClickListener(new View.OnClickListener() {@Override
-        public void onClick(View v) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-            builder.setTitle(getResources().getString(R.string.Settings_NewEmail));
-            final EditText input = new EditText(getContext());
-            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
-            builder.setView(input);
-            builder.setPositiveButton(getResources().getString(R.string.Accept_ok), new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {
-                ChangeEmail Chng = new ChangeEmail();
-                ArrayList list = getFileKeys("session");
-                Chng.execute("https://turma12i.com/JoaoFabio/FCT/changeEmail.php", "POST", list.get(0).toString(), list.get(1).toString(), input.getText().toString());
-                dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.changepassword_dialog), getResources().getString(R.string.changepassword_dialog_Message), true);
+        changeEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle(getResources().getString(R.string.Settings_NewEmail));
+                final EditText input = new EditText(getContext());
+                input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+                builder.setView(input);
+                builder.setPositiveButton(getResources().getString(R.string.Accept_ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ChangeEmail Chng = new ChangeEmail();
+                        ArrayList list = getFileKeys("session");
+                        Chng.execute("https://turma12i.com/JoaoFabio/FCT/changeEmail.php", "POST", list.get(0).toString(), list.get(1).toString(), input.getText().toString());
+                        dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.changepassword_dialog), getResources().getString(R.string.changepassword_dialog_Message), true);
+                    }
+                });
+                builder.setNegativeButton(getResources().getString(R.string.Cancel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
             }
-            });
-            builder.setNegativeButton(getResources().getString(R.string.Cancel), new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-            });
-            builder.show();
-        }
         });
 
         final Button closed = view.findViewById(R.id.closedsource); //closedSource
-        closed.setOnClickListener(new View.OnClickListener() {@Override
-        public void onClick(View v) {
-            DialogManager Dm = new DialogManager();
-            Dm.Critical = false;
-            Dm.ErrorCode = 15;
-            Dm.listener = new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {}
-            };
-            Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
-            Dm = null;
-        }
+        closed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogManager Dm = new DialogManager();
+                Dm.Critical = false;
+                Dm.ErrorCode = 15;
+                Dm.listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                };
+                Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
+                Dm = null;
+            }
         });
 
         final Button userAgreement = view.findViewById(R.id.useterms); //EULAS
-        userAgreement.setOnClickListener(new View.OnClickListener() {@Override
-        public void onClick(View v) {
-            DialogManager Dm = new DialogManager();
-            Dm.Critical = false;
-            Dm.ErrorCode = 17;
-            Dm.listener = new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {}
-            };
-            Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
-            Dm = null;
-        }
+        userAgreement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogManager Dm = new DialogManager();
+                Dm.Critical = false;
+                Dm.ErrorCode = 17;
+                Dm.listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                };
+                Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
+                Dm = null;
+            }
         });
 
         final Button privacy = view.findViewById(R.id.privacy); //Privacy
-        privacy.setOnClickListener(new View.OnClickListener() {@Override
-        public void onClick(View v) {
-            DialogManager Dm = new DialogManager();
-            Dm.Critical = false;
-            Dm.ErrorCode = 16;
-            Dm.listener = new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {}
-            };
-            Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
-            Dm = null;
-        }
+        privacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogManager Dm = new DialogManager();
+                Dm.Critical = false;
+                Dm.ErrorCode = 16;
+                Dm.listener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                };
+                Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "LegalDialog");
+                Dm = null;
+            }
         });
 
         //Logut
         final Button LogoutButton = view.findViewById(R.id.logout); //
-        LogoutButton.setOnClickListener(new View.OnClickListener() {@Override
-        public void onClick(View v) {
-            DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {@Override
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case DialogInterface.BUTTON_POSITIVE:
-                        doLogout request = new doLogout();
-                        ArrayList < String > Data = getFileKeys("session");
-                        request.execute("https://turma12i.com/JoaoFabio/FCT/LogoutAndroid.php", "POST", Data.get(0), Data.get(1));
-                        dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.logout_title), getResources().getString(R.string.logout_message), true);
-                        break;
+        LogoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case DialogInterface.BUTTON_POSITIVE:
+                                doLogout request = new doLogout();
+                                ArrayList < String > Data = getFileKeys("session");
+                                request.execute("https://turma12i.com/JoaoFabio/FCT/LogoutAndroid.php", "POST", Data.get(0), Data.get(1));
+                                dialogLoading = ProgressDialog.show(getContext(), getResources().getString(R.string.logout_title), getResources().getString(R.string.logout_message), true);
+                                break;
 
-                    case DialogInterface.BUTTON_NEGATIVE:
-                        break;
-                }
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                break;
+                        }
+                    }
+                };
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle(getResources().getString(R.string.dialog_logout_title)).setMessage(getResources().getString(R.string.dialog_logout_message)).setPositiveButton(getResources().getString(R.string.dialog_logout_positive), dialogClickListener).setNegativeButton(getResources().getString(R.string.dialog_logout_negative), dialogClickListener).show();
             }
-            };
-            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-            builder.setTitle(getResources().getString(R.string.dialog_logout_title)).setMessage(getResources().getString(R.string.dialog_logout_message)).setPositiveButton(getResources().getString(R.string.dialog_logout_positive), dialogClickListener).setNegativeButton(getResources().getString(R.string.dialog_logout_negative), dialogClickListener).show();
-        }
         });
     }
 
@@ -238,7 +263,7 @@ public class fragment_settings extends Fragment {
                 //Connect
                 Connection.connect();
                 //Initialize Buffers
-                InputStreamReader in =new InputStreamReader(Connection.getInputStream());
+                InputStreamReader in = new InputStreamReader(Connection.getInputStream());
                 StringBuilder sb = new StringBuilder();
                 BufferedReader Buffer = new BufferedReader( in );
                 //Reads Contents
@@ -246,7 +271,7 @@ public class fragment_settings extends Fragment {
                     sb.append(InputBuffer);
                 }
                 //Closes Buffers
-                in .close(); in =null;
+                in .close(); in = null;
                 Buffer.close();
                 Buffer = null;
                 InputBuffer = null;
@@ -258,18 +283,16 @@ public class fragment_settings extends Fragment {
                     Result = "valid";
                     Error = false;
                     Log.d("lolo", String.valueOf(Error));
-                }
-                else if (Result.equalsIgnoreCase("error")) {
+                } else if (Result.equalsIgnoreCase("error")) {
                     Result = "error";
                     Error = true;
                     Log.d("lolo", String.valueOf(Error));
-                }
-                else {
+                } else {
                     Result = "invalid";
                     Invalid = true;
                     Log.d("lolo", String.valueOf(Invalid));
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 Error = true;
                 return e.toString();
             }
@@ -287,8 +310,9 @@ public class fragment_settings extends Fragment {
                     DialogManager Dm = new DialogManager();
                     Dm.Critical = false;
                     Dm.ErrorCode = 12;
-                    Dm.listener = new DialogInterface.OnClickListener() {@Override
-                    public void onClick(DialogInterface dialog, int which) {}
+                    Dm.listener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
                     };
                     Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
                 } else {
@@ -298,8 +322,9 @@ public class fragment_settings extends Fragment {
                         DialogManager Dm = new DialogManager();
                         Dm.Critical = false;
                         Dm.ErrorCode = 12;
-                        Dm.listener = new DialogInterface.OnClickListener() {@Override
-                        public void onClick(DialogInterface dialog, int which) {}
+                        Dm.listener = new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {}
                         };
                         Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
                     } else {
@@ -342,7 +367,7 @@ public class fragment_settings extends Fragment {
                 //Connect
                 Connection.connect();
                 //Initialize Buffers
-                InputStreamReader in =new InputStreamReader(Connection.getInputStream());
+                InputStreamReader in = new InputStreamReader(Connection.getInputStream());
                 StringBuilder sb = new StringBuilder();
                 BufferedReader Buffer = new BufferedReader( in );
                 //Reads Contents
@@ -350,7 +375,7 @@ public class fragment_settings extends Fragment {
                     sb.append(InputBuffer);
                 }
                 //Closes Buffers
-                in .close(); in =null;
+                in .close(); in = null;
                 Buffer.close();
                 Buffer = null;
                 InputBuffer = null;
@@ -362,18 +387,16 @@ public class fragment_settings extends Fragment {
                     Result = "valid";
                     Error = false;
                     Log.d("lolo", String.valueOf(Error));
-                }
-                else if (Result.equalsIgnoreCase("error")) {
+                } else if (Result.equalsIgnoreCase("error")) {
                     Result = "error";
                     Error = true;
                     Log.d("lolo", String.valueOf(Error));
-                }
-                else {
+                } else {
                     Result = "invalid";
                     Invalid = true;
                     Log.d("lolo", String.valueOf(Invalid));
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 Error = true;
                 return e.toString();
             }
@@ -391,18 +414,19 @@ public class fragment_settings extends Fragment {
                     DialogManager Dm = new DialogManager();
                     Dm.Critical = false;
                     Dm.ErrorCode = 21;
-                    Dm.listener = new DialogInterface.OnClickListener() {@Override
-                    public void onClick(DialogInterface dialog, int which) {}
+                    Dm.listener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
                     };
                     Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
                     ChangePasswordFailed();
-                }
-                else {
+                } else {
                     DialogManager Dm = new DialogManager();
                     Dm.Critical = false;
                     Dm.ErrorCode = 22;
-                    Dm.listener = new DialogInterface.OnClickListener() {@Override
-                    public void onClick(DialogInterface dialog, int which) {}
+                    Dm.listener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
                     };
                     Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
                     ChangePasswordFailed();
@@ -443,7 +467,7 @@ public class fragment_settings extends Fragment {
                 //Connect
                 Connection.connect();
                 //Initialize Buffers
-                InputStreamReader in =new InputStreamReader(Connection.getInputStream());
+                InputStreamReader in = new InputStreamReader(Connection.getInputStream());
                 StringBuilder sb = new StringBuilder();
                 BufferedReader Buffer = new BufferedReader( in );
                 //Reads Contents
@@ -451,7 +475,7 @@ public class fragment_settings extends Fragment {
                     sb.append(InputBuffer);
                 }
                 //Closes Buffers
-                in .close(); in =null;
+                in .close(); in = null;
                 Buffer.close();
                 Buffer = null;
                 InputBuffer = null;
@@ -463,18 +487,16 @@ public class fragment_settings extends Fragment {
                     Result = "valid";
                     Error = false;
                     Log.d("lolo", String.valueOf(Error));
-                }
-                else if (Result.equalsIgnoreCase("error")) {
+                } else if (Result.equalsIgnoreCase("error")) {
                     Result = "error";
                     Error = true;
                     Log.d("lolo", String.valueOf(Error));
-                }
-                else {
+                } else {
                     Result = "invalid";
                     Invalid = true;
                     Log.d("lolo", String.valueOf(Invalid));
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 Error = true;
                 return e.toString();
             }
@@ -492,23 +514,24 @@ public class fragment_settings extends Fragment {
                     DialogManager Dm = new DialogManager();
                     Dm.Critical = false;
                     Dm.ErrorCode = 24;
-                    Dm.listener = new DialogInterface.OnClickListener() {@Override
-                    public void onClick(DialogInterface dialog, int which) {}
+                    Dm.listener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
                     };
                     Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
                     ChangePasswordFailed();
-                }
-                else {
+                } else {
                     DialogManager Dm = new DialogManager();
                     Dm.Critical = false;
                     Dm.ErrorCode = 23;
-                    Dm.listener = new DialogInterface.OnClickListener() {@Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        FileManager Fm = new FileManager();
-                        Fm.openFile(Objects.requireNonNull(getContext()), "session");
-                        Fm.removeFile();
-                        startActivity(new Intent(getContext(), Launcher.class));
-                    }
+                    Dm.listener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            FileManager Fm = new FileManager();
+                            Fm.openFile(Objects.requireNonNull(getContext()), "session");
+                            Fm.removeFile();
+                            startActivity(new Intent(getContext(), Launcher.class));
+                        }
                     };
                     Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
                     ChangePasswordFailed();
@@ -548,7 +571,7 @@ public class fragment_settings extends Fragment {
                 //Connect
                 Connection.connect();
                 //Initialize Buffers
-                InputStreamReader in =new InputStreamReader(Connection.getInputStream());
+                InputStreamReader in = new InputStreamReader(Connection.getInputStream());
                 StringBuilder sb = new StringBuilder();
                 BufferedReader Buffer = new BufferedReader( in );
                 //Reads Contents
@@ -556,7 +579,7 @@ public class fragment_settings extends Fragment {
                     sb.append(InputBuffer);
                 }
                 //Closes Buffers
-                in .close(); in =null;
+                in .close(); in = null;
                 Buffer.close();
                 Buffer = null;
                 InputBuffer = null;
@@ -568,18 +591,16 @@ public class fragment_settings extends Fragment {
                     Result = "valid";
                     Error = false;
                     Log.d("lolo", String.valueOf(Error));
-                }
-                else if (Result.equalsIgnoreCase("error")) {
+                } else if (Result.equalsIgnoreCase("error")) {
                     Result = "error";
                     Error = true;
                     Log.d("lolo", String.valueOf(Error));
-                }
-                else {
+                } else {
                     Result = "invalid";
                     Invalid = true;
                     Log.d("lolo", String.valueOf(Invalid));
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 Error = true;
                 return e.toString();
             }
@@ -597,23 +618,24 @@ public class fragment_settings extends Fragment {
                     DialogManager Dm = new DialogManager();
                     Dm.Critical = false;
                     Dm.ErrorCode = 26;
-                    Dm.listener = new DialogInterface.OnClickListener() {@Override
-                    public void onClick(DialogInterface dialog, int which) {}
+                    Dm.listener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
                     };
                     Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
                     ChangePasswordFailed();
-                }
-                else {
+                } else {
                     DialogManager Dm = new DialogManager();
                     Dm.Critical = false;
                     Dm.ErrorCode = 25;
-                    Dm.listener = new DialogInterface.OnClickListener() {@Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        FileManager Fm = new FileManager();
-                        Fm.openFile(Objects.requireNonNull(getContext()), "session");
-                        Fm.removeFile();
-                        startActivity(new Intent(getContext(), Launcher.class));
-                    }
+                    Dm.listener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            FileManager Fm = new FileManager();
+                            Fm.openFile(Objects.requireNonNull(getContext()), "session");
+                            Fm.removeFile();
+                            startActivity(new Intent(getContext(), Launcher.class));
+                        }
                     };
                     Dm.show(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), "ErrorDialog");
                     ChangePasswordFailed();
@@ -630,7 +652,7 @@ public class fragment_settings extends Fragment {
         FileInputStream fis = null;
         try {
             fis = getContext().openFileInput("session");
-        } catch(FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         assert fis != null;
@@ -643,7 +665,7 @@ public class fragment_settings extends Fragment {
                 line = reader.readLine();
                 LineCounter++;
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             // Error occurred when opening raw file for reading.
         } finally {
             String contents = stringBuilder.toString();
@@ -681,5 +703,27 @@ public class fragment_settings extends Fragment {
             }
         }
         return list;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        DialogFragment Df = (DialogFragment) Objects.requireNonNull(getActivity()).getSupportFragmentManager().findFragmentByTag("LegalDialog");
+        if (Df != null) Df.dismiss();
+
+        Df = (DialogFragment) Objects.requireNonNull(getActivity()).getSupportFragmentManager().findFragmentByTag("ErrorDialog");
+        if (Df != null) Df.dismiss();
+    }
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+
+        DialogFragment Df = (DialogFragment) Objects.requireNonNull(getActivity()).getSupportFragmentManager().findFragmentByTag("LegalDialog");
+        if (Df != null) Df.dismiss();
+
+        Df = (DialogFragment) Objects.requireNonNull(getActivity()).getSupportFragmentManager().findFragmentByTag("ErrorDialog");
+        if (Df != null) Df.dismiss();
     }
 }

@@ -39,7 +39,7 @@
         android:id="@+id/textView9"
         android:layout_width="175dp"
         android:layout_height="46dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="80dp"
         android:text="@string/login_problems"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -52,7 +52,7 @@
         android:id="@+id/textView10"
         android:layout_width="175dp"
         android:layout_height="46dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="80dp"
         android:text="@string/login_donthaveaccount"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -80,13 +80,14 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/loginpannel_buttons"
         android:fontFamily="sans-serif-black"
         android:text="@string/loginmenu_loginbutton"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
@@ -108,7 +109,8 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
+        android:autofillHints="@string/login_emailHint"
         android:background="@drawable/loginpannel_buttons"
         android:backgroundTint="@color/colorPrimary"
         android:drawableTint="#FFFFFF"
@@ -121,14 +123,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        android:autofillHints="@string/login_emailHint" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints="@string/login_passwordHint"
         android:background="@drawable/loginpannel_buttons"
         android:ems="10"
         android:hint="@string/login_passwordHint"
@@ -139,7 +141,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        android:autofillHints="@string/login_passwordHint" />
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

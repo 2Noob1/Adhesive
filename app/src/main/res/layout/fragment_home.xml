@@ -27,7 +27,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -63,21 +63,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="sans-serif"
         android:textSize="20sp"
         android:text="@string/fragment_home_text_1" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif"
-        android:textSize="20sp"
-        android:text="@string/fragment_home_text_2" />
         </LinearLayout>
     </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

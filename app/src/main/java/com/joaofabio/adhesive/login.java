@@ -1,6 +1,7 @@
 package com.joaofabio.adhesive;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,6 +9,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import java.util.Objects;
 
 public class login extends AppCompatActivity {
 
@@ -32,7 +35,7 @@ public class login extends AppCompatActivity {
                     //
                 }
             };
-            dialog.show(getSupportFragmentManager(),"lol");
+            dialog.show(getSupportFragmentManager(),"ErrorDialog");
         }
 
         Button Login = findViewById(R.id.button);
@@ -58,4 +61,17 @@ public class login extends AppCompatActivity {
         });
 
     }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        DialogFragment Df = (DialogFragment) Objects.requireNonNull(this).getSupportFragmentManager().findFragmentByTag("LegalDialog");
+        if (Df != null) Df.dismiss();
+
+        Df = (DialogFragment) Objects.requireNonNull(this).getSupportFragmentManager().findFragmentByTag("ErrorDialog");
+        if (Df != null) Df.dismiss();
+    }
+
 }
