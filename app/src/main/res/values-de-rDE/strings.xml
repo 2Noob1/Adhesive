@@ -135,4 +135,7 @@
     <string name="fragment_home_4">Partner &amp; Designer</string>
     <string name="fragment_home_5">UX/UI Designer</string>
     <string name="fragment_home_6">Web Developer</string>
+    <string name="fragment_home_text_8">Wer wir sind?</string>
+    <string name="fragment_home_team">" Mannschaft:"</string>
+    <string name="fragment_home_team">" Mannschaft:"</string>
 </resources>

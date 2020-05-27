@@ -57,16 +57,45 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="50dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="@string/fragment_home_text_8"
+                android:gravity="center"
+                android:background="@color/secoundaryColor"
+                android:textColor="@android:color/white"
+                android:fontFamily="sans-serif-black"
+                android:textSize="30sp">
+
+            </TextView>
+
+
+            <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif"
         android:textSize="20sp"
+        android:layout_marginBottom="20dp"
         android:text="@string/fragment_home_text_1" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 
         <androidx.cardview.widget.CardView
@@ -93,6 +122,8 @@
                 android:textSize="30sp">
 
             </TextView>
+
+
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_marginTop="30dp"
