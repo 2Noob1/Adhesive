@@ -131,4 +131,8 @@
     <string name="deactivate_positive">Ja</string>
     <string name="deactivate_negatove">Nein</string>
     <string name="loginmenu_loginbutton" translatable="false">Hier anmelden></string>
+    <string name="fragment_home_text_3" translatable="false">Partner &amp; Creative Director</string>
+    <string name="fragment_home_4">Partner &amp; Designer</string>
+    <string name="fragment_home_5">UX/UI Designer</string>
+    <string name="fragment_home_6">Web Developer</string>
 </resources>

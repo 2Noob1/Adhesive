@@ -1,13 +1,7 @@
 package com.joaofabio.adhesive;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.DialogFragment;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -17,20 +11,20 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
-import org.json.JSONObject;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.DialogFragment;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Objects;
 
 public class Launcher extends AppCompatActivity {
@@ -49,7 +43,7 @@ public class Launcher extends AppCompatActivity {
                 ok();
             }
         },1000);
-        getWindow().setStatusBarColor(getResources().getColor(R.color.activity_Color));
+        getWindow().setStatusBarColor(getResources().getColor(R.color.secoundaryColor));
 
     }
 

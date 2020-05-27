@@ -131,4 +131,8 @@
     <string name="deactivate_negatove">Não</string>
     <string name="ClosedSourceLicensesTitle">Licenças de código fechado</string>
     <string name="OpenSourceLicensesTitle">Google Play Services https://developers.google.com/ Slider de imagem do Android \ n \ n Copyright [2019] [Ali Hosseini] \ n Licenciado sob a Apache License, versão 2.0; você não pode usar este arquivo, exceto em conformidade com a Licença. Você pode obter uma cópia da Licença em \ n \ t \ thttp: //www.apache.org/licenses/LICENSE-2.0 \ n A menos que exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a Licença seja distribuído em uma base "COMO ESTÁ", SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas. Consulte a licença para obter o idioma específico que rege as permissões e limitações sob a licença. \ N</string>
+    <string name="fragment_home_text_3" translatable="false">Partner &amp; Creative Director</string>
+    <string name="fragment_home_4">Partner &amp; Designer</string>
+    <string name="fragment_home_5">UX/UI Designer</string>
+    <string name="fragment_home_6">Web Developer</string>
 </resources>
