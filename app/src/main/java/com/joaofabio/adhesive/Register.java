@@ -1,9 +1,5 @@
 package com.joaofabio.adhesive;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -19,6 +15,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -30,8 +30,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Objects;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity {
     ProgressDialog dialogLoading;
@@ -169,7 +167,7 @@ public class Register extends AppCompatActivity {
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            //Again too lazy to search a better way to get date from a claendar freagment tha this fucking bullshit
+
             tv.setText(year + "-" + (month + 1) + "-" + day);
         }
     }
@@ -201,7 +199,6 @@ public class Register extends AppCompatActivity {
                 Connection.setReadTimeout(5000);
 
                 //Headers
-                //There must a a more secure way to send data tha this peace of crap
                 Connection.setRequestProperty("Name",strings[2]);
                 Connection.setRequestProperty("Email",strings[3]);
                 Connection.setRequestProperty("Password",strings[4]);
@@ -234,7 +231,6 @@ public class Register extends AppCompatActivity {
 
             Log.d("RegisterDEBUG",result);
             try{
-                //again there is defenitly a way to get better json to stringMap
                 final JSONObject json = new JSONObject(result);
                 Iterator<String> iterator = json.keys();
                 ArrayList<String> stringMap = new ArrayList<>();

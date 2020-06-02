@@ -1,8 +1,5 @@
 package com.joaofabio.adhesive;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,7 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import org.json.JSONObject;
 
@@ -155,7 +154,7 @@ public class LoginAction extends AppCompatActivity {
                 return e.toString();
             }
             try{
-                //there is a better way to convert json into an stringMap other than this bullshit
+
                 final JSONObject json = new JSONObject(Result);
                 Iterator<String> iterator = json.keys();
                 ArrayList<String> stringMap = new ArrayList<>();
@@ -195,7 +194,7 @@ public class LoginAction extends AppCompatActivity {
             }
             return Result;
         }
-        //yollo
+
         @Override
         protected void onPostExecute(String s) {
             Log.d("Lol",s);
