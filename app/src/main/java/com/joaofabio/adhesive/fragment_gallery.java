@@ -9,13 +9,7 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-
-import com.smarteist.autoimageslider.SliderView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class fragment_gallery extends Fragment {
@@ -76,6 +70,7 @@ public class fragment_gallery extends Fragment {
     }
 
     public void openFullscreen(int code){
+        //vai abrir o fragment que explica mais detalhadamente os projetos
         Intent newActivity = new Intent(getContext(),gallery_fullscreen.class);
         newActivity.putExtra("ProductCode",code);
         startActivity(newActivity);

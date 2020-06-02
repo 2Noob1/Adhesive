@@ -31,7 +31,7 @@ public class LoginAction extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_action);
 
-        Button donthaveaccountbtn = findViewById(R.id.button5);
+        Button donthaveaccountbtn = findViewById(R.id.button5); //redireciona para o fragment register
         donthaveaccountbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +41,7 @@ public class LoginAction extends AppCompatActivity {
         });
         getWindow().setStatusBarColor(getResources().getColor(R.color.activity_Color));
 
-        Button loginbtn = findViewById(R.id.button3);
+        Button loginbtn = findViewById(R.id.button3); //botão que vai executar o login
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +67,7 @@ public class LoginAction extends AppCompatActivity {
     }
 
     public void errorLogin(Integer ErrorId){
+        //erro ao fazer o login
         DialogManager dialog = new DialogManager();
         dialog.targetActivity = this;
         dialog.ErrorCode = ErrorId;
@@ -179,7 +180,7 @@ public class LoginAction extends AppCompatActivity {
                     return Result;
                 }
 
-
+                //O ficheiro SESSION tem os dados separados
                 String filename = "session";
                 String fileContents = "AuthKey:" + stringMap.get(4).toString() + "\nEmail:" + stringMap.get(0).toString();
                 try (FileOutputStream fos = openFileOutput(filename, MODE_PRIVATE)) {
@@ -197,6 +198,7 @@ public class LoginAction extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
+            //vai verificar se dá erro, caso contrário vai para o main activity
             Log.d("Lol",s);
             if ((error) && ErrorCode == 0){
                 ErrorCode = 3;

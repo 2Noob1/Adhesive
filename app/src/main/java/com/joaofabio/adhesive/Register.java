@@ -39,7 +39,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        Button alreadyhaveaccountbtn = findViewById(R.id.button7);
+        Button alreadyhaveaccountbtn = findViewById(R.id.button7); //botão que vai redirecionar para o fragment login
         alreadyhaveaccountbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +49,7 @@ public class Register extends AppCompatActivity {
         });
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.activity_Color));
-        Button Register = findViewById(R.id.button6);
+        Button Register = findViewById(R.id.button6); //Botão que faz o registo
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,18 +57,18 @@ public class Register extends AppCompatActivity {
             }
         });
 
-        tv = findViewById(R.id.editText7);
+        tv = findViewById(R.id.editText7); //calendário
         tv.setFocusable(false);
         tv.setClickable(true);
 
     }
 
-    public void doRegister(){
+    public void doRegister(){ //classe que vai fazer o registo
         Log.d("sss","sss");
         dialogLoading = ProgressDialog.show(this, getResources().getString(R.string.register_progressTitle),
                 getResources().getString(R.string.register_progressMessage), true);
         if (!checkforemptyfields()){
-
+            //verificar se os campos estão vazios
             DialogManager dialog = new DialogManager();
             dialog.targetActivity = this;
             dialog.ErrorCode = 1;
@@ -102,12 +102,14 @@ public class Register extends AppCompatActivity {
     }
 
     public void toggledatefragmment(View v) {
+        //novo fragment do calendario
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 
 
     public boolean checkforemptyfields(){
+        //verificar se os campos estão vazios
         TextView[] fields = {
                 findViewById(R.id.editText6),//Nome
                 findViewById(R.id.editText3),//Email
@@ -134,6 +136,7 @@ public class Register extends AppCompatActivity {
     }
 
     public void ErrorRegistering(Integer ErrorId){
+        //erro ao registar
         DialogManager dialog = new DialogManager();
         dialog.targetActivity = this;
         dialog.ErrorCode = ErrorId;
@@ -148,6 +151,7 @@ public class Register extends AppCompatActivity {
     }
 
     public static class DatePickerFragment extends DialogFragment
+        //calendário
             implements DatePickerDialog.OnDateSetListener {
 
         EditText tv;
@@ -155,6 +159,7 @@ public class Register extends AppCompatActivity {
         @NonNull
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
+            //funcionamento do calendário
             tv = Objects.requireNonNull(getActivity()).findViewById(R.id.editText7);
             // Use the current date as the default date in the picker
             final Calendar c = Calendar.getInstance();

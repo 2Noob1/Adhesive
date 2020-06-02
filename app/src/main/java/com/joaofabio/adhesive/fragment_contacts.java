@@ -34,7 +34,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -150,7 +149,7 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
         LatLng Adhesive = new LatLng(38.63663505470294,-9.105647762351694);
-        map.addMarker(new MarkerOptions().position(Adhesive).title("Adhesisve"));
+        map.addMarker(new MarkerOptions().position(Adhesive).title("Adhesive"));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(Adhesive,15));
         map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
     }
@@ -352,9 +351,14 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
     }
 
 
-
     @Override
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
+
+        DialogFragment Df = (DialogFragment) Objects.requireNonNull(getActivity()).getSupportFragmentManager().findFragmentByTag("LegalDialog");
+        if (Df != null) Df.dismiss();
+
+        Df = (DialogFragment) Objects.requireNonNull(getActivity()).getSupportFragmentManager().findFragmentByTag("ErrorDialog");
+        if (Df != null) Df.dismiss();
     }
 }

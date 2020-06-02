@@ -50,7 +50,7 @@ public class gallery_fullscreen extends AppCompatActivity {
         switch(ProjectCode){
             case 1:
                 projectImage.setImageDrawable(getResources().getDrawable(R.drawable.p1, getApplicationContext().getTheme()));
-                imageSliderModelList.add(new ImageSliderModel(R.drawable.p1_1));
+                imageSliderModelList.add(new ImageSliderModel(R.drawable.p1_1)); //apresentar o IMAGESLIDERMOEL
                 imageSliderModelList.add(new ImageSliderModel(R.drawable.p1_2));
                 imageSliderModelList.add(new ImageSliderModel(R.drawable.p1_3));
                 imageSliderModelList.add(new ImageSliderModel(R.drawable.p1_5));
