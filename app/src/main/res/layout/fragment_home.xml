@@ -165,9 +165,6 @@
 
 
 
-
-
-
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_marginTop="100dp"
                 android:id="@+id/profile_image2"
