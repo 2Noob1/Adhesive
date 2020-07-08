@@ -8,12 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/secoundaryColor"
-        android:text="@string/main_menu_settings"
-        android:textSize="50sp"
+        android:fontFamily="@font/montserrat"
         android:gravity="center"
+        android:text="@string/main_menu_settings"
         android:textColor="@android:color/white"
-        android:fontFamily="sans-serif-black"
-        />
+        android:textSize="50sp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -40,11 +39,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:text="@string/settings_account_title"
-                android:gravity="center"
                 android:background="@color/secoundaryColor"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/settings_account_title"
                 android:textColor="@android:color/white"
-                android:fontFamily="sans-serif-black"
                 android:textSize="30sp">
 
             </TextView>
@@ -54,45 +53,52 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/loginpannel_buttons"
+                android:fontFamily="@font/montserrat"
                 android:text="@string/settings_account_changepersonaldata"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
             <Button
                 android:id="@+id/chagepasswordbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/loginpannel_buttons"
+                android:fontFamily="@font/montserrat"
                 android:text="@string/settings_account_changePassword"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
             <Button
                 android:id="@+id/logout"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/loginpannel_buttons"
+                android:fontFamily="@font/montserrat"
                 android:text="@string/settings_account_logout"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
             <Button
                 android:id="@+id/deleteAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/loginpannel_buttons"
+                android:fontFamily="@font/montserrat"
                 android:text="@string/settings_account_deactivate"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -112,11 +118,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:text="@string/settings_legal_title"
-                    android:gravity="center"
                     android:background="@color/secoundaryColor"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="@string/settings_legal_title"
                     android:textColor="@android:color/white"
-                    android:fontFamily="sans-serif-black"
                     android:textSize="30sp">
 
                 </TextView>
@@ -126,45 +132,52 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:textSize="18sp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/loginpannel_buttons"
+                    android:fontFamily="@font/montserrat"
                     android:text="@string/settings_legal_userAgreement"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
                 <Button
                     android:id="@+id/osbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:textSize="18sp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/loginpannel_buttons"
+                    android:fontFamily="@font/montserrat"
                     android:text="@string/settings_legal_OpenSourceLicenses"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
                 <Button
                     android:id="@+id/closedsource"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:textSize="18sp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/loginpannel_buttons"
+                    android:fontFamily="@font/montserrat"
                     android:text="@string/settings_legal_closedsource"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
                 <Button
                     android:id="@+id/privacy"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:textSize="18sp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/loginpannel_buttons"
+                    android:fontFamily="@font/montserrat"
                     android:text="@string/settings_legal_privacy"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

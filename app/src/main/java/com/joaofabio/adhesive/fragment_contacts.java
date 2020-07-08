@@ -77,6 +77,16 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
             }
         });
 
+        final Button dir = view.findViewById(R.id.dir);
+        dir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapIntent = new Intent("android.intent.action.VIEW", Uri.parse("google.navigation:q=38.63663505470294,-9.105647762351694"));
+                mapIntent.setPackage("com.google.android.apps.maps");
+               startActivity(mapIntent);
+            }
+        });
+
 
         Button call1 = view.findViewById(R.id.call1);
         call1.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +102,20 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
                 }
             }
         });
+        Button sms1 = view.findViewById(R.id.SMS1);
+        sms1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StringBuilder sb = new StringBuilder();
+                sb.append("smsto:");
+                sb.append(fragment_contacts.this.getResources().getString(R.string.call1));
+                Intent it = new Intent("android.intent.action.SENDTO", Uri.parse(sb.toString()));
+                it.putExtra("sms_body", fragment_contacts.this.getResources().getString(R.string.contacts_messageBody));
+                fragment_contacts.this.startActivity(it);
+            }
+        });
+
+
         Button call2 = view.findViewById(R.id.call2);
         call2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +130,20 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
                 }
             }
         });
+
+        Button sms2 = view.findViewById(R.id.SMS2);
+        sms2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StringBuilder sb = new StringBuilder();
+                sb.append("smsto:");
+                sb.append(fragment_contacts.this.getResources().getString(R.string.call2));
+                Intent it = new Intent("android.intent.action.SENDTO", Uri.parse(sb.toString()));
+                it.putExtra("sms_body", fragment_contacts.this.getResources().getString(R.string.contacts_messageBody));
+                fragment_contacts.this.startActivity(it);
+            }
+        });
+
         Button call3 = view.findViewById(R.id.call3);
         call3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,6 +156,19 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
                 }else{
                     doCall();
                 }
+            }
+        });
+
+        Button sms3 = view.findViewById(R.id.SMS3);
+        sms3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StringBuilder sb = new StringBuilder();
+                sb.append("smsto:");
+                sb.append(fragment_contacts.this.getResources().getString(R.string.call2));
+                Intent it = new Intent("android.intent.action.SENDTO", Uri.parse(sb.toString()));
+                it.putExtra("sms_body", fragment_contacts.this.getResources().getString(R.string.contacts_messageBody));
+                fragment_contacts.this.startActivity(it);
             }
         });
     }

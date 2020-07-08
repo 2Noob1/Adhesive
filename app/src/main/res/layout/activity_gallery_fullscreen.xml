@@ -5,27 +5,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/activity_Color">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="50dp"
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        android:backgroundTint="@color/secoundaryColor"
-        android:background="@drawable/ic_buttons2"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/retrun"
-        android:textColor="@color/activity_Color"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        android:src="@color/colorPrimary"
+        android:elevation="1dp"/>
+
+    <Button
+        android:layout_marginTop="1dp"
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/gallery_fullscreenBack"
+        android:layout_marginStart="20dp"
+        android:textColor="@android:color/white" />
+
+
+    <Button
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@null"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/gallery_fullscreenContacts"
+        android:textColor="@android:color/white" />
+
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,27 +49,27 @@
                 android:id="@+id/gallery_projectimage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:contentDescription="shuit up"
+                android:contentDescription="TODO"
                 android:scaleType="centerCrop"
                 android:src="@drawable/p1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="@string/gallery_projectDetails"
-                android:fontFamily="sans-serif-black"
-                android:textSize="35sp"
                 android:layout_gravity="center"
-                android:background="@drawable/loginpannel_buttons"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/colorPrimary"/>
+                android:background="@drawable/loginpannel_buttons"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/gallery_projectDetails"
+                android:textColor="@color/colorPrimary"
+                android:textSize="35sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/montserrat"
                 android:text="@string/gallery_client"
                 android:textSize="18sp" />
 
@@ -65,33 +79,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/montserrat"
                 android:text="C.M Barreiro"
                 android:textSize="14sp"
                 android:textStyle="italic" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif"
-                android:text="@string/gallery_project"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/projectText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
-                android:fontFamily="sans-serif"
-                android:text="Criação de marca e identidade corporativa, conceito criativo e imagem gráfica de campanha, design gráfico de peças de comunicação e merchandising de suporte às campanhas, criação de presença online do evento"
-                android:textSize="14sp"
-                android:textStyle="italic" />
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,23 +99,46 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginTop="5dp"
-                android:fontFamily="sans-serif"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
                 android:text="Brand Design &amp; Strategy, Print Design, Interactive Design &amp; Social Media"
                 android:textSize="14sp"
                 android:textStyle="italic" />
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/gallery_project"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/projectText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Criação de marca e identidade corporativa, conceito criativo e imagem gráfica de campanha, design gráfico de peças de comunicação e merchandising de suporte às campanhas, criação de presença online do evento"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="@string/gallery_projectGallery"
-                android:background="@drawable/loginpannel_buttons"
-                android:fontFamily="sans-serif-black"
-                android:textSize="35sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/colorPrimary"/>
+                android:background="@drawable/loginpannel_buttons"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/gallery_projectGallery"
+                android:textColor="@color/colorPrimary"
+                android:textSize="35sp" />
             <androidx.cardview.widget.CardView
                 android:layout_marginTop="10dp"
                 android:layout_width="350dp"

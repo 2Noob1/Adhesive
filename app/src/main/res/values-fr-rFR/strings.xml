@@ -137,5 +137,12 @@
     <string name="fragment_home_6">Web Developer</string>
     <string name="fragment_home_text_8">qui nous sommes?</string>
     <string name="fragment_home_team">" Équipe:"</string>
+    <string name="launcher_bottomText">Nous aimons tous partager une bonne histoire. Racontons ensemble l\'histoire de votre marque.</string>
+    <string name="gallery_fullscreenBack">&lt;  retourner</string>
+    <string name="gallery_fullscreenContacts">Contactez-nous &gt;</string>
+    <string name="gallery_your_project_Title">Votre projet</string>
+    <string name="gallery_your_project_content">Chaque projet a une histoire, racontons la vôtre.</string>
+    <string name="contacts_getdirections">Obtenir des directions</string>
+    <string name="contacts_messageBody">Ici, vous pouvez définir le texte SMS à envoyer</string>
 
 </resources>

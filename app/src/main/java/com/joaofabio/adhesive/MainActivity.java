@@ -11,6 +11,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static int ToWhere = 0;
+    public static boolean needsChange = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,4 +53,15 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
     };
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (needsChange && ToWhere == 1) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.FragmentView, new fragment_contacts()).commit();
+            ((BottomNavigationView) findViewById(R.id.bottom_navigation)).setSelectedItemId(R.id.menu_main_Contacts);
+            needsChange = false;
+            ToWhere = 0;
+        }
+    }
 }

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/secoundaryColor"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/montserrat"
         android:gravity="center"
         android:text="@string/main_menu_contacts"
         android:textColor="@android:color/white"
@@ -43,13 +43,12 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:text="@string/contacts_cardview"
-                        android:gravity="center"
                         android:background="@color/secoundaryColor"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/contacts_cardview"
                         android:textColor="@android:color/white"
-                        android:fontFamily="sans-serif-black"
-                        android:textSize="30sp">
-                    </TextView>
+                        android:textSize="30sp"></TextView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -57,18 +56,20 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:fontFamily="sans-serif-black"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/contacts_name1" />
 
                     <EditText
                         android:id="@+id/assunto"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_width="300dp"
                         android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="16dp"
+                        android:autofillHints="Texto"
                         android:backgroundTint="@color/colorPrimary"
                         android:drawableTint="#FFFFFF"
                         android:ems="13"
+                        android:fontFamily="@font/montserrat"
                         android:hint="@string/contacts_name1"
                         android:inputType="textPersonName"
                         android:textColor="@color/colorPrimary"
@@ -77,48 +78,40 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView8"
-                        android:autofillHints="Texto"/>
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
-                        android:fontFamily="sans-serif-black"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/contacts_name2" />
 
 
-
-
-
-
                     <EditText
-                    android:id="@+id/mensagem"
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:drawableTint="#FFFFFF"
-                    android:ems="13"
-                    android:hint="@string/contacts_name2"
-                    android:inputType="textMultiLine"
-                    android:textColor="@color/colorPrimary"
-                    android:textColorHint="@color/colorPrimary"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8"
-                    android:autofillHints="Texto" />
-
-
-
-
+                        android:id="@+id/mensagem"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:autofillHints="Texto"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:drawableTint="#FFFFFF"
+                        android:ems="13"
+                        android:fontFamily="@font/montserrat"
+                        android:hint="@string/contacts_name2"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 
                     <Button
@@ -130,6 +123,7 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/loginpannel_buttons"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/contacts_button_Send"
                         android:textColor="@color/colorPrimary"
                         tools:ignore="RtlHardcoded" />
@@ -153,18 +147,18 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:text="@string/contacts_title"
-                        android:gravity="center"
                         android:background="@color/secoundaryColor"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/contacts_title"
                         android:textColor="@android:color/white"
-                        android:fontFamily="sans-serif-black"
-                        android:textSize="30sp">
-                    </TextView>
+                        android:textSize="30sp"></TextView>
 
                     <LinearLayout
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent">
+
                         <TextView
 
                             android:layout_width="wrap_content"
@@ -172,20 +166,37 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="+351215986542"
-                            android:gravity="center"/>
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:text="+351215986542" />
+
                         <Button
                             android:id="@+id/call1"
-                            android:layout_marginStart="10dp"
-                            android:layout_gravity="center"
-                            android:layout_width="100dp"
+                            android:layout_width="80dp"
                             android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="10dp"
                             android:layout_marginBottom="10dp"
                             android:background="@drawable/loginpannel_buttons"
+                            android:fontFamily="@font/montserrat"
                             android:text="@string/Contacts_Call"
+                            android:textColor="@color/colorPrimary"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Button
+                            android:id="@+id/SMS1"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/loginpannel_buttons"
+                            android:fontFamily="@font/montserrat"
+                            android:text="sms"
                             android:textColor="@color/colorPrimary"
                             tools:ignore="RtlHardcoded" />
                     </LinearLayout>
@@ -195,6 +206,7 @@
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent">
+
                         <TextView
 
                             android:layout_width="wrap_content"
@@ -202,20 +214,37 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="+351961387146"
-                            android:gravity="center"/>
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:text="+351961387146" />
+
                         <Button
                             android:id="@+id/call2"
-                            android:layout_marginStart="10dp"
-                            android:layout_gravity="center"
-                            android:layout_width="100dp"
+                            android:layout_width="80dp"
                             android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="10dp"
                             android:layout_marginBottom="10dp"
                             android:background="@drawable/loginpannel_buttons"
+                            android:fontFamily="@font/montserrat"
                             android:text="@string/Contacts_Call"
+                            android:textColor="@color/colorPrimary"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Button
+                            android:id="@+id/SMS2"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/loginpannel_buttons"
+                            android:fontFamily="@font/montserrat"
+                            android:text="sms"
                             android:textColor="@color/colorPrimary"
                             tools:ignore="RtlHardcoded" />
                     </LinearLayout>
@@ -225,6 +254,7 @@
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent">
+
                         <TextView
 
                             android:layout_width="wrap_content"
@@ -232,20 +262,37 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="+351964325651"
-                            android:gravity="center"/>
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:text="+351964325651" />
+
                         <Button
                             android:id="@+id/call3"
-                            android:layout_marginStart="10dp"
-                            android:layout_gravity="center"
-                            android:layout_width="100dp"
+                            android:layout_width="80dp"
                             android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="10dp"
                             android:layout_marginBottom="10dp"
                             android:background="@drawable/loginpannel_buttons"
+                            android:fontFamily="@font/montserrat"
                             android:text="@string/Contacts_Call"
+                            android:textColor="@color/colorPrimary"
+                            tools:ignore="RtlHardcoded" />
+
+                        <Button
+                            android:id="@+id/SMS3"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/loginpannel_buttons"
+                            android:fontFamily="@font/montserrat"
+                            android:text="sms"
                             android:textColor="@color/colorPrimary"
                             tools:ignore="RtlHardcoded" />
                     </LinearLayout>
@@ -269,13 +316,12 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:text="@string/contacts_CardView2"
-                        android:gravity="center"
                         android:background="@color/secoundaryColor"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="@string/contacts_CardView2"
                         android:textColor="@android:color/white"
-                        android:fontFamily="sans-serif-black"
-                        android:textSize="30sp">
-                    </TextView>
+                        android:textSize="30sp"></TextView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -283,7 +329,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:fontFamily="sans-serif-black"
+                        android:fontFamily="@font/montserrat"
                         android:text="Av. da República, nº9 E, 1º andar" />
 
                     <TextView
@@ -293,7 +339,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
-                        android:fontFamily="sans-serif-black"
+                        android:fontFamily="@font/montserrat"
                         android:text="Quinta do Outeiro" />
 
                     <TextView
@@ -303,9 +349,22 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
-                        android:fontFamily="sans-serif-black"
+                        android:fontFamily="@font/montserrat"
                         android:text="2840-468 Seixal, Portugal" />
 
+                    <Button
+                        android:id="@+id/dir"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/loginpannel_buttons"
+                        android:fontFamily="@font/montserrat"
+                        android:text="@string/contacts_getdirections"
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="RtlHardcoded" />
 
                     <com.google.android.gms.maps.MapView
                         xmlns:map="http://schemas.android.com/apk/res-auto"

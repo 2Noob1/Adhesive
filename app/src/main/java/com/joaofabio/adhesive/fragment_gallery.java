@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class fragment_gallery extends Fragment {
     public int f = 0;
@@ -30,7 +32,8 @@ public class fragment_gallery extends Fragment {
             view.findViewById(R.id.project2),
             view.findViewById(R.id.project3),
             view.findViewById(R.id.project4),
-            view.findViewById(R.id.project5)
+            view.findViewById(R.id.project5),
+            view.findViewById(R.id.yourProject)
         };
         moreinfos[0].setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -67,6 +70,12 @@ public class fragment_gallery extends Fragment {
             }
         });
 
+        moreinfos[5].setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                fragment_gallery.this.getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.FragmentView, new fragment_contacts()).commit();
+                ((BottomNavigationView) fragment_gallery.this.getActivity().findViewById(R.id.bottom_navigation)).setSelectedItemId(R.id.menu_main_Contacts);
+            }
+        });
     }
 
     public void openFullscreen(int code){

@@ -27,14 +27,29 @@ public class gallery_fullscreen extends AppCompatActivity {
         imageSliderModelList = new ArrayList<>();
         sliderView = findViewById(R.id.imageSlider2);
 
-        Button back = findViewById(R.id.button3);
+        Button back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
+
+
+        Button contacts = findViewById(R.id.contacts);
+        contacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.needsChange = true;
+                MainActivity.ToWhere = 1;
+                finish();
+            }
+        });
+
         getWindow().setStatusBarColor(getResources().getColor(R.color.secoundaryColor));
+
+
+
 
         //bunlde
         Bundle bundle = getIntent().getExtras();

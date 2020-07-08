@@ -182,4 +182,11 @@
     <string name="fragment_home_5">UX/UI Designer</string>
     <string name="fragment_home_6">Web Developer</string>
     <string name="fragment_home_text_8">Who we are?</string>
+    <string name="launcher_bottomText">We all love to share a good story. Let\'s together tell the story of your brand.</string>
+    <string name="gallery_fullscreenBack">&lt; Go back</string>
+    <string name="gallery_fullscreenContacts">Contact us &gt;</string>
+    <string name="gallery_your_project_Title">Your Project</string>
+    <string name="gallery_your_project_content">Every Project has a story, let\\\'s tell yours.</string>
+    <string name="contacts_getdirections">Get Directions</string>
+    <string name="contacts_messageBody">Here you can set the SMS text to be sent</string>
 </resources>

@@ -41,27 +41,27 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:text="@string/fragment_home_text_8"
-                android:gravity="center"
                 android:background="@color/secoundaryColor"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/fragment_home_text_8"
                 android:textColor="@android:color/white"
-                android:fontFamily="sans-serif-black"
                 android:textSize="30sp">
 
             </TextView>
 
 
             <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif"
-        android:textSize="20sp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/fragment_home_text_1" />
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/fragment_home_text_1"
+                android:textSize="20sp" />
 
         <androidx.cardview.widget.CardView
                 android:layout_width="300dp"
@@ -116,11 +116,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:text="@string/fragment_home_team"
-                android:gravity="center"
                 android:background="@color/secoundaryColor"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/fragment_home_team"
                 android:textColor="@android:color/white"
-                android:fontFamily="sans-serif-black"
                 android:textSize="30sp">
 
             </TextView>
@@ -140,27 +140,27 @@
             <TextView
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@android:color/primary_text_light_nodisable"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:text="Pedro Alexandre Santos" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Pedro Alexandre Santos"
+                android:textColor="@android:color/primary_text_light_nodisable"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:text="@string/fragment_home_text_3" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/fragment_home_text_3"
+                android:textSize="20sp" />
 
 
 
@@ -178,27 +178,27 @@
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@android:color/primary_text_light_nodisable"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:text="Ana Almeida Santos" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Ana Almeida Santos"
+                android:textColor="@android:color/primary_text_light_nodisable"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:text="@string/fragment_home_4" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/fragment_home_4"
+                android:textSize="20sp" />
 
 
 
@@ -215,29 +215,29 @@
                 app:civ_border_width="2dp" />
 
             <TextView
-            android:id="@+id/textView20"
-            android:layout_width="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif"
-            android:textColor="@android:color/primary_text_light_nodisable"
-            android:layout_gravity="center_horizontal"
-            android:textSize="20sp"
-            android:text="Débora Pita" />
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Débora Pita"
+                android:textColor="@android:color/primary_text_light_nodisable"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:text="@string/fragment_home_5" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/fragment_home_5"
+                android:textSize="20sp" />
 
 
 
@@ -256,27 +256,27 @@
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@android:color/primary_text_light_nodisable"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:text="Ana Rita Lopes" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Ana Rita Lopes"
+                android:textColor="@android:color/primary_text_light_nodisable"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:text="@string/fragment_home_6" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/fragment_home_6"
+                android:textSize="20sp" />
 
 
 
@@ -295,28 +295,28 @@
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@android:color/primary_text_light_nodisable"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:text="David Jesus Sota" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="David Jesus Sota"
+                android:textColor="@android:color/primary_text_light_nodisable"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/fragment_home_6" />
+                android:fontFamily="@font/montserrat"
+                android:text="@string/fragment_home_6"
+                android:textSize="20sp" />
 
         </LinearLayout>
         </androidx.cardview.widget.CardView>
