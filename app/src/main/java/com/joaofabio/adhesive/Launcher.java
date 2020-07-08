@@ -35,7 +35,6 @@ public class Launcher extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
-        // ola //
         Handler hn = new Handler();
         hn.postDelayed(new Runnable() {
             @Override
@@ -100,8 +99,6 @@ public class Launcher extends AppCompatActivity {
                 return;
             }
 
-            // other 'case' lines to check for other
-            // permissions this app might request
         }
     }
 

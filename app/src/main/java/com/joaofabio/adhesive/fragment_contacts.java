@@ -48,6 +48,7 @@ public class fragment_contacts extends Fragment implements OnMapReadyCallback {
     MapView mapFragment;
     private DialogManager Dm;
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
